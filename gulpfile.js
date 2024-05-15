@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+const gulp = require('gulp'); // Set 4.0.2 version cause 5th has bug!!!!!!!
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
