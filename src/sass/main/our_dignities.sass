@@ -60,5 +60,25 @@
         display: flex
         flex-direction: column
         align-items: center
+        &__title
+          font-family: yanone-medium
+          color: $main_blue
+          font-size: 2vw
+        &__comment
+          font-family: rubik-regular
+          color: black
+          font-size: 1.2vw
+          &__mark-blue
+            font-family: yanone-medium
+            color: $main_blue
+            font-size: 1.5vw
+          &__mark-green
+            font-family: yanone-medium
+            color: $main_green
+            font-size: 1.5vw
+
       &__image-container
         grid-column: 2 / 3
+        &__img
+          width: 100%
+          height: auto
