@@ -1,0 +1,36 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+
+.company-description-core
+  width: 100%
+  max-width: 2400px
+  flex-direction: column
+  align-items: center
+  background-color: white
+  &__restricted-width
+    width: 100%
+    max-width: 1400px
+    display: grid
+    grid-template-columns: repeat(10, 1fr)
+    grid-template-rows: repeat(10, 1fr)
+  &__grid-container
+    grid-column: 3 / 9
+    grid-row: 3 / 10
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__h3
+      font-family: yanone-medium
+      font-size: 5vw
+      color: $main_blue
+    &__separator
+      border: 3px solid $main_green
+      border-radius: 20px
+      width: 15%
+      margin: 2% 0
+    &__h4
+      font-family : yanone-light
+      font-weight: normal
+      font-size: 2.5vw
+      color: black
+      margin-top: 2%
