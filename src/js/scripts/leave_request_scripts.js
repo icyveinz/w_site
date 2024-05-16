@@ -12,5 +12,11 @@ $(function() {
                 'border-radius' : "8px"
             })
         }
+    });
+
+    // Fetch the name & surname of customer and then make a request to the API.
+    $(".leave-request-div__request-frame-div__button").on('click', function() {
+        const name = document.getElementById("customer_name").value;
+        const phone_num = document.getElementById("customer_phone").value;
     })
 });
