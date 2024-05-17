@@ -1,0 +1,42 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+@import "../assets/mixins"
+
+.our-reliability-core
+  @include restricted-2400-wrapper
+  position: relative
+  &__image
+    width: 100%
+  &__absolute-container
+    position: absolute
+    top: 10%
+    width: 80%
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__h3-title
+      font-size: 4vw
+      font-family: yanone-medium
+      color: $main_blue
+      text-align: center
+    &__flex-layout
+      margin-top: 5%
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      &__single-achievement-container
+        display: flex
+        flex-direction: column
+        width: 28%
+        align-items: center
+        &__main-number
+          font-family: rubik-regular
+          color: $main_green
+          font-size: 7vw
+          text-align: center
+        &__comment
+          margin-top: 8%
+          font-family: yanone-light
+          color: black
+          font-size: 3vw
+          text-align: center
