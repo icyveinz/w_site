@@ -1,0 +1,44 @@
+@import "../assets/fonts"
+@import "../assets/mixins"
+@import "../assets/colors"
+
+.our-activities-core
+  @include restricted-2400-wrapper
+  background-color: white
+  &__restricted-width
+    @include restricted-1400-wrapper
+  &__container
+    display: flex
+    flex-direction: column
+    width: 60%
+    align-items: center
+    margin-top: 5%
+    &__title
+      font-family: yanone-medium
+      font-size: 3vw
+      color: $main_blue
+    &__comments
+      margin-top: 3%
+      font-family: yanone-light
+      font-size: 2vw
+      color: black
+  &__countries-layout-container
+    display: flex
+    flex-direction: row
+    width: 70%
+    justify-content: space-between
+    margin: 5% 0
+    &__image-comment-container
+      width: 20%
+      display: flex
+      flex-direction: column
+      align-items: center
+      &__img
+        width: 100%
+        height: auto
+        border-radius: 50%
+      &__comment
+        margin-top: 10%
+        font-family: yanone-medium
+        font-size: 2.3vw
+        color: $main_blue
