@@ -1,0 +1,34 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+@import "../assets/mixins"
+
+.our-services-core
+  @include restricted-2400-wrapper
+  background-color: white
+  &__restricted-width
+    @include restricted-1400-wrapper
+  &__container
+    @include title-and-description-centered-container
+    &__title
+      font-family: yanone-medium
+      font-size: 4vw
+      color: $main_blue
+    &__comments
+      margin-top: 3%
+      font-family: yanone-light
+      font-size: 2vw
+      color: black
+  &__grid-container
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    &__image-placeholder
+      grid-column: 1 / 2
+    &__inv-image-placeholder
+      grid-column: 2 / 3
+    &__text-placeholder
+      grid-column: 2 / 3
+      @include title-and-description-centered-container
+    &__inv-text-placeholder
+      grid-column: 1 / 2
+      @include title-and-description-centered-container
