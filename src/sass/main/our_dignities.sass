@@ -1,5 +1,13 @@
 @import "../assets/fonts"
 @import "../assets/colors"
+@import "../assets/mixins"
+
+@mixin grid-text-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background-color: white
 
 .our-dignities-core
   width: 100%
@@ -36,7 +44,7 @@
       color: black
       margin-top: 2%
   &__grid-holder
-    margin-top: 3%
+    margin: 3% 0
     width: 80%
     display: grid
     grid-template-columns: repeat(4, 1fr)
@@ -56,36 +64,32 @@
     &__separated-stack
       display: grid
       grid-template-columns: repeat(2, 1fr)
+      &__reversed-text-container
+        grid-column: 2 / 3
+        @include grid-text-content
       &__text-container
         grid-column: 1 / 2
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
-        background-color: white
+        @include grid-text-content
         &__title
           margin-top: 5%
           font-family: yanone-medium
           color: $main_blue
           font-size: 2vw
           text-align: center
+          padding: 0 5%
         &__comment
           margin-top: 5%
-          font-family: rubik-regular
+          font-family: yanone-light
           color: black
-          font-size: 1.4vw
+          font-size: 1.8vw
           text-align: center
+          padding: 0 5%
           &__mark-blue
-            font-family: yanone-medium
-            color: $main_blue
-            background: none
-            font-size: 1.8vw
+            @include text-mark(yanone-medium, $main_blue, 1.8vw)
           &__mark-green
-            font-family: yanone-medium
-            color: $main_green
-            background: none
-            font-size: 1.8vw
-
+            @include text-mark(yanone-medium, $main_green, 1.8vw)
+      &__reversed-image-container
+        grid-column: 1 / 2
       &__image-container
         grid-column: 2 / 3
         &__img
