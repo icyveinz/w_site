@@ -2,6 +2,15 @@
 @import "../assets/colors"
 @import "../assets/mixins"
 
+// Local mixin for placing title and text inside the grid.
+@mixin title-comment-layout-inside-grid
+  display: flex
+  width: 100%
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+
 .our-services-core
   @include restricted-2400-wrapper
   background-color: white
@@ -19,16 +28,30 @@
       font-size: 2vw
       color: black
   &__grid-container
-    width: 100%
+    margin-top: 5%
+    width: 80%
     display: grid
     grid-template-columns: repeat(2, 1fr)
+    column-gap: 3%
     &__image-placeholder
+      width: 100%
+      height: auto
       grid-column: 1 / 2
     &__inv-image-placeholder
       grid-column: 2 / 3
     &__text-placeholder
       grid-column: 2 / 3
-      @include title-and-description-centered-container
+      @include title-comment-layout-inside-grid
     &__inv-text-placeholder
       grid-column: 1 / 2
-      @include title-and-description-centered-container
+      @include title-comment-layout-inside-grid
+    &__grid-text
+      &__title
+        font-family: yanone-medium
+        font-size: 3vw
+        color: $main_blue
+      &__comment
+        margin-top: 3%
+        font-family: yanone-light
+        font-size: 1.8vw
+        color: black
