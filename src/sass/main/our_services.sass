@@ -11,6 +11,12 @@
   justify-content: center
 
 
+// Local mixin for formatting image size inside the the grid.
+@mixin image-in-grid-formatter
+  width: 100%
+  height: auto
+
+
 .our-services-core
   @include restricted-2400-wrapper
   background-color: white
@@ -34,10 +40,10 @@
     grid-template-columns: repeat(2, 1fr)
     column-gap: 3%
     &__image-placeholder
-      width: 100%
-      height: auto
+      @include image-in-grid-formatter
       grid-column: 1 / 2
     &__inv-image-placeholder
+      @include image-in-grid-formatter
       grid-column: 2 / 3
     &__text-placeholder
       grid-column: 2 / 3
@@ -50,6 +56,7 @@
         font-family: yanone-medium
         font-size: 3vw
         color: $main_blue
+        text-align: center
       &__comment
         margin-top: 3%
         font-family: yanone-light
