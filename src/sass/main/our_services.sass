@@ -1,0 +1,66 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+@import "../assets/mixins"
+
+// Local mixin for placing title and text inside the grid.
+@mixin title-comment-layout-inside-grid
+  display: flex
+  width: 100%
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+
+// Local mixin for formatting image size inside the the grid.
+@mixin image-in-grid-formatter
+  width: 100%
+  height: auto
+
+
+.our-services-core
+  @include restricted-2400-wrapper
+  background-color: white
+  &__restricted-width
+    @include restricted-1400-wrapper
+  &__container
+    @include title-and-description-centered-container
+    &__title
+      font-family: yanone-medium
+      font-size: 4vw
+      color: $main_blue
+    &__comments
+      margin-top: 3%
+      font-family: yanone-light
+      font-size: 2vw
+      color: black
+  &__grid-container
+    margin-top: 5%
+    width: 80%
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 3%
+    &__image-placeholder
+      @include image-in-grid-formatter
+      grid-column: 1 / 2
+    &__inv-image-placeholder
+      @include image-in-grid-formatter
+      grid-column: 2 / 3
+    &__text-placeholder
+      grid-column: 2 / 3
+      @include title-comment-layout-inside-grid
+    &__inv-text-placeholder
+      grid-column: 1 / 2
+      @include title-comment-layout-inside-grid
+    &__grid-text
+      &__title
+        font-family: yanone-medium
+        font-size: 3vw
+        color: $main_blue
+        text-align: center
+      &__comment
+        margin-top: 3%
+        font-family: yanone-light
+        font-size: 1.8vw
+        color: black
+        &__text-mark-green
+          @include text-mark(yanone-medium, $main_green, 2vw)
