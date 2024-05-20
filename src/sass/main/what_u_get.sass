@@ -1,0 +1,55 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+@import "../assets/mixins"
+
+.what-u-get-core
+  @include place-in-center-before-wrapping
+  &__max-width
+    @include restricted-2400-wrapper
+    background-color: $main_grey
+  &__restricted-width
+    @include restricted-1400-wrapper
+  &__container
+    @include title-and-description-centered-container
+    &__title
+      font-family: yanone-medium
+      font-size: 4vw
+      color: $main_blue
+    &__comments
+      margin-top: 3%
+      font-family: yanone-light
+      font-size: 2vw
+      color: black
+  &__pros-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 80%
+    &__single-layout
+      margin-top: 5%
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      &__image-container
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        width: 25%
+        &__image
+          width: 30%
+          height: auto
+      &__title-comment-container
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 70%
+        &__title
+          font-family: yanone-medium
+          font-size: 3vw
+          color: $main_blue
+          text-align: left
+        &__comment
+          margin-top: 3%
+          font-family: yanone-light
+          font-size: 1.8vw
+          color: black
