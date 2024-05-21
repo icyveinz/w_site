@@ -15,14 +15,24 @@ async function initMap() {
         {
             location: {
                 // Координаты центра карты
-                center: [37.588144, 55.733842],
+                center: [37.470427, 55.676080],
 
                 // Уровень масштабирования
-                zoom: 10
+                zoom: 15
             }
         }
     );
 
     // Добавляем слой для отображения схематической карты
     map.addChild(new YMapDefaultSchemeLayer());
+
+    map.addChild(new ymaps3.YMapDefaultFeaturesLayer()); // В этом слое будут маркеры.
+    // DOM-элемент должен быть создан заранее, но его содержимое можно задать в любой момент.
+    const content = document.createElement('section');
+    const marker = new ymaps3.YMapMarker({
+        coordinates: [37.470427, 55.676080],
+        draggable: true
+    }, content);
+    map.addChild(marker);
+    content.innerHTML = '<h1>Этот заголовок можно переносить</h1>';
 }
