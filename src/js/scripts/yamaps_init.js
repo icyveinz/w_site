@@ -1,38 +1,34 @@
-initMap();
+ymaps.ready(init);
 
-async function initMap() {
-    // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
-    await ymaps3.ready;
+function init() {
+    var myMap = new ymaps.Map("yandex-maps", {
+            center: [55.676160, 37.470385],
+            zoom: 15
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
 
-    const {YMap, YMapDefaultSchemeLayer} = ymaps3;
-
-    // Иницилиазируем карту
-    const map = new YMap(
-        // Передаём ссылку на HTMLElement контейнера
-        document.getElementById('yandex-maps'),
-
-        // Передаём параметры инициализации карты
-        {
-            location: {
-                // Координаты центра карты
-                center: [37.470427, 55.676080],
-
-                // Уровень масштабирования
-                zoom: 15
+        // Создаем геообъект с типом геометрии "Точка".
+        myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [55.676160, 37.470385]
+            },
+            // Свойства.
+            properties: {
+                // Контент метки.
+                iconContent: 'ООО «УОЛГРИН ЛОГИСТИКС РУС» ',
+                hintContent: 'Мичуринский пр-т. Олимпийская Деревня, дом 4к1, 2-й этаж, офис 3 '
             }
-        }
-    );
+        }, {
+            // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#blackStretchyIcon',
+            // Метку можно перемещать.
+            draggable: true
+        });
 
-    // Добавляем слой для отображения схематической карты
-    map.addChild(new YMapDefaultSchemeLayer());
-
-    map.addChild(new ymaps3.YMapDefaultFeaturesLayer()); // В этом слое будут маркеры.
-    // DOM-элемент должен быть создан заранее, но его содержимое можно задать в любой момент.
-    const content = document.createElement('section');
-    const marker = new ymaps3.YMapMarker({
-        coordinates: [37.470427, 55.676080],
-        draggable: true
-    }, content);
-    map.addChild(marker);
-    content.innerHTML = '<h1>Этот заголовок можно переносить</h1>';
+    myMap.geoObjects
+        .add(myGeoObject);
 }
