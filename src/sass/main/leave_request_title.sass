@@ -16,12 +16,11 @@
     width: 70%
     display: flex
     flex-direction: column
-    align-items: center
   &__h1-title-styler
     font-family: yanone-medium
     font-size: 5vw
     color: $main_blue
-  &__h3-title-styler
+  &__p-title-styler
     font-family : yanone-light
     font-weight: normal
     font-size: 2.5vw
@@ -65,3 +64,11 @@
       cursor: pointer
       transition: all 0.7s
       text-decoration: none
+
+
+@media (min-width: 2400px)
+  .leave-request-div
+    &__h1-title-styler
+      font-size: 80px
+    &__p-title-styler
+      font-size: 50px
