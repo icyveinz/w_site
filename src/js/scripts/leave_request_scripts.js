@@ -28,6 +28,11 @@ function verify_fields(name, phone_mail, comment) {
 }
 
 function write_customer_request(name, phone, comment) {
+
+    const route = {
+        url : "http://localhost:8000"
+    }
+
     fetch(`${route.url}/api/walgreen/customer/write`, {
         method : "POST",
         body : JSON.stringify({
@@ -44,7 +49,7 @@ function write_customer_request(name, phone, comment) {
             console.log('success!')
         })
         .catch(function(err) {
-            console.log(`${err}`)
+            console.log(err)
         })
 }
 
