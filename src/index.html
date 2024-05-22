@@ -23,6 +23,8 @@
     <script src="js/libraries/wow.min.js"></script>
     <script src="js/libraries/aos.js"></script>
 
+    <script type="module" src="js/constants/constants.js"></script>
+
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=57dffcef-37e9-4061-a8d3-8219e6b04fe4" type="text/javascript"></script>
     <script src="js/scripts/yamaps_init.js"></script>
 
@@ -77,7 +79,7 @@
             <p class="leave-request-div__h3-title-styler">
                 Взаимодействие и&nbsp;взаиморасчёты с&nbsp;заводом, аудит соответствия продукции ГОСТ, разработка дизайна, таможенное оформление, оформление деклараций соответствия, маркировка в&nbsp;системе &laquo;Честный Знак&raquo;, передача товара по&nbsp;ЭДО
             </p>
-            <form class="leave-request-div__request-call-column-align">
+            <div class="leave-request-div__request-call-column-align">
                 <div class="leave-request-div__request-call-form-div">
                     <div class="leave-request-div__request-frame-div">
                         <label for="customer_name" class="leave-request-div__request-frame-div__header">Ваше имя</label>
@@ -94,10 +96,10 @@
                         <input id="customer_comment" class="leave-request-div__request-frame-div__input">
                     </div>
                     <div class="leave-request-div__request-frame-div">
-                        <button type="submit" class="leave-request-div__request-frame-div__button">Заказать звонок</button>
+                        <button class="leave-request-div__request-frame-div__button">Заказать звонок</button>
                     </div>
                 </div>
-            </form>
+            </div>
         </section>
     </div>
 

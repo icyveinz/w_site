@@ -1,4 +1,4 @@
-function verify_fields(name : String, phone_mail : String, comment : String) : [boolean, String] {
+function verify_fields(name, phone_mail, comment) {
     if (name.length >= 2) {
         if (phone_mail.includes("@")) {
             if (comment.length >= 10) {
@@ -27,8 +27,25 @@ function verify_fields(name : String, phone_mail : String, comment : String) : [
     }
 }
 
-function write_customer_request(name : String, phone : String, comment : String) : void {
-    fetch()
+function write_customer_request(name, phone, comment) {
+    fetch(`${route.url}/api/walgreen/customer/write`, {
+        method : "POST",
+        body : JSON.stringify({
+            customer_name : `${name}`,
+            customer_phone_email : `${phone}`,
+            customer_comment : `${comment}`
+        }),
+        headers : {
+            "Content-Type" : "application/json"
+        }
+    })
+        .then((respone) => respone.json())
+        .then((json) => {
+            console.log('success!')
+        })
+        .catch(function(err) {
+            console.log(`${err}`)
+        })
 }
 
 $(function() {
@@ -55,8 +72,11 @@ $(function() {
         const phone_num = document.getElementById("customer_phone").value;
         const comment = document.getElementById("customer_comment").value;
 
+        console.log('clicked');
+
         switch (verify_fields(name, phone_num, comment)[0]) {
             case true:
+                write_customer_request(name, phone_num, comment);
                 return
             case false:
                 return;
