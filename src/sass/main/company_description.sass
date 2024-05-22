@@ -1,12 +1,11 @@
 @import "../assets/fonts"
 @import "../assets/colors"
+@import "../assets/mixins"
 
+.company-description-centered
+  @include place-in-center-before-wrapping
 .company-description-core
-  width: 100%
-  max-width: 2400px
-  display: flex
-  flex-direction: column
-  align-items: center
+  @include restricted-2400-wrapper
   background-color: white
   &__restricted-width
     width: 100%
