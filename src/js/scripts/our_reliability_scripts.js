@@ -31,23 +31,16 @@ function animateValue(id, start, end, duration) {
         }
     }, INTERVAL_TIME);
 }
-
+// Launch the animations for counters.
 function init() {
-    animateValue('reliability-clients-count', 0, 98, 5000);
-    animateValue('reliability-years-count', 0, 12, 5000);
-    animateValue('reliability-directions-count', 0, 186, 5000);
+    animateValue('reliability-clients-count', 0, 98, 4000);
+    animateValue('reliability-years-count', 0, 12, 4000);
+    animateValue('reliability-directions-count', 0, 186, 4000);
 }
 
+// When AOS transition is activated - launch the animations.
 $(function() {
-    let inited = false;
-
-    $(window).on('scroll', function() {
-        if (inited) {
-            return
-        }
-        if (document.getElementById('reliability-animation').offsetTop >= window.innerHeight + document.body.scrollTop) {
-            inited = true;
-            init()
-        }
+    document.addEventListener("aos:in:activate-counters", ({_}) => {
+        init();
     });
 })
