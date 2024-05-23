@@ -49,7 +49,7 @@ gulp.task('js-library-mover', function() { // move library js files.
 
 gulp.task('js-compressor', function() {
     return gulp
-        .src('src/js/scripts/*.js')
+        .src('src/js/scripts/**/*.js')
         .pipe(minify())
         .pipe(gulp.dest('dist/js/scripts'))
 });

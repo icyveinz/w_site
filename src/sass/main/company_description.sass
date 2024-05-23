@@ -1,22 +1,21 @@
 @import "../assets/fonts"
 @import "../assets/colors"
+@import "../assets/mixins"
 
+.company-description-centered
+  @include place-in-center-before-wrapping
 .company-description-core
-  width: 100%
-  max-width: 2400px
-  display: flex
-  flex-direction: column
-  align-items: center
+  @include restricted-2400-wrapper
   background-color: white
   &__restricted-width
     width: 100%
     max-width: 1400px
-    display: grid
-    grid-template-columns: repeat(10, 1fr)
-    grid-template-rows: repeat(10, 1fr)
+    display: flex
+    flex-direction: column
+    align-items: center
   &__grid-container
-    grid-column: 3 / 9
-    grid-row: 3 / 10
+    margin-top: 3%
+    width: 80%
     display: flex
     flex-direction: column
     align-items: center
@@ -29,7 +28,7 @@
       border-radius: 20px
       width: 15%
       margin: 2% 0
-    &__h4
+    &__p
       font-family : yanone-light
       font-weight: normal
       font-size: 2.5vw
@@ -43,3 +42,12 @@
         font-family: yanone-medium
         color: $main_blue
         background: none
+
+
+@media (min-width: 2400px)
+  .company-description-core
+    &__grid-container
+      &__h3
+        font-size: 80px
+      &__p
+        font-size: 60px

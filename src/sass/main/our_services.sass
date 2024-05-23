@@ -16,6 +16,8 @@
   width: 100%
   height: auto
 
+.our-services-centered
+  @include place-in-center-before-wrapping
 
 .our-services-core
   @include restricted-2400-wrapper
@@ -65,3 +67,16 @@
         color: black
         &__text-mark-green
           @include text-mark(yanone-medium, $main_green, 2vw)
+
+
+@media (min-width: 2400px)
+  .our-services-core__container__title
+    font-size: 80px
+  .our-services-core__container__comments
+    font-size: 50px
+  .our-services-core__grid-container__grid-text__title
+    font-size: 40px
+  .our-services-core__grid-container__grid-text__comment
+    font-size: 27px
+  .our-services-core__grid-container__grid-text__comment__text-mark-green
+    font-size: 32px
