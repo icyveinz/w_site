@@ -71,19 +71,27 @@ async function display_and_hide_notification(object) {
 
     $(".leave-request-div__absolute-container").append(object);
     await delay(5000);
-    document.querySelector(".leave-request-div__result_message_form").remove();
+    const target = document.querySelector(".leave-request-div__result_message_form")
+    target.classList.add("animate__fadeOutDown");
+
+    function handleAnimationEnd(event) {
+        event.stopPropagation();
+        target.remove();
+    }
+
+    target.addEventListener('animationend', handleAnimationEnd, {once : true});
 }
 
 function format_the_object(reply, message) {
     switch (reply) {
         case true:
-            return `<section class="leave-request-div__result_message_form">
+            return `<section class="leave-request-div__result_message_form animate__animated animate__fadeInDown">
                     <h3 class="leave-request-div__result_message_form__message-header">Успешно!</h3>
                     <p class="leave-request-div__result_message_form__message-p">${message}</p>
                 </section>`
 
         case false:
-            return `<section class="leave-request-div__result_message_form">
+            return `<section class="leave-request-div__result_message_form animate__animated animate__fadeInDown">
                     <h3 class="leave-request-div__result_message_form__message-header">Ошибка!</h3>
                     <p class="leave-request-div__result_message_form__message-p">${message}</p>
                 </section>`
