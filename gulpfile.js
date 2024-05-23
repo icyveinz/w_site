@@ -47,14 +47,9 @@ gulp.task('js-library-mover', function() { // move library js files.
         .pipe(gulp.dest('dist/js/libraries'))
 });
 
-gulp.task('js-constants-mover', function() { // move constants to the dist folder
-    return gulp.src('src/js/constants/*.js')
-        .pipe(gulp.dest('dist/js/constants'))
-})
-
 gulp.task('js-compressor', function() {
     return gulp
-        .src('src/js/scripts/*.js')
+        .src('src/js/scripts/**/*.js')
         .pipe(minify())
         .pipe(gulp.dest('dist/js/scripts'))
 });
@@ -81,7 +76,6 @@ gulp.task("default", gulp.parallel(
     'plugins-mover',
     'scripts-mover',
     'js-library-mover',
-    'js-constants-mover',
     'js-compressor',
     'images-mover',
     'fonts-mover'

@@ -46,24 +46,62 @@ function write_customer_request(name, phone, comment) {
     })
         .then((respone) => respone.json())
         .then((json) => {
-            console.log('success!')
+            if (json.is_succeed) {
+                const object = format_the_object(true, json.message);
+                display_and_hide_notification(object)
+                    .then(() => {
+                        document.getElementById("customer_name").value = "";
+                        document.getElementById("customer_phone").value = "";
+                        document.getElementById("customer_comment").value = "";
+                    })
+            }
+            else {
+                const object = format_the_object(false, json.message);
+                display_and_hide_notification(object)
+            }
         })
         .catch(function(err) {
-            console.log(err)
+            const object = format_the_object(false, err)
+            display_and_hide_notification(object)
         })
 }
 
-$(function() {
+async function display_and_hide_notification(object) {
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+
+    $(".leave-request-div__absolute-container").append(object);
+    await delay(5000);
+    document.querySelector(".leave-request-div__result_message_form").remove();
+}
+
+function format_the_object(reply, message) {
+    switch (reply) {
+        case true:
+            return `<section class="leave-request-div__result_message_form">
+                    <h3 class="leave-request-div__result_message_form__message-header">Успешно!</h3>
+                    <p class="leave-request-div__result_message_form__message-p">${message}</p>
+                </section>`
+
+        case false:
+            return `<section class="leave-request-div__result_message_form">
+                    <h3 class="leave-request-div__result_message_form__message-header">Ошибка!</h3>
+                    <p class="leave-request-div__result_message_form__message-p">${message}</p>
+                </section>`
+
+    }
+}
+
+$(function () {
     const button = $(".leave-request-div__request-frame-div__button");
 
     button.on({
-        mouseenter : function() {
+        mouseenter: function () {
             $(this).css({
-                'background-color' : "rgb(174, 209, 84)",
-                'border-radius' : "15px"
+                'background-color': "rgb(174, 209, 84)",
+                'border-radius': "15px"
             })
         },
-        mouseleave : function() {
+        mouseleave: function () {
             $(this).css({
                 'background-color' : "#177b96",
                 'border-radius' : "8px"
@@ -79,11 +117,14 @@ $(function() {
 
         console.log('clicked');
 
-        switch (verify_fields(name, phone_num, comment)[0]) {
+        const result = verify_fields(name, phone_num, comment);
+
+        switch (result[0]) {
             case true:
                 write_customer_request(name, phone_num, comment);
                 return
             case false:
+                display_and_hide_notification(format_the_object(false, result[1]))
                 return;
         }
     })
