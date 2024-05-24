@@ -10,9 +10,9 @@ function write_customer_request(name, phone, comment) {
     fetch(`${route.url}/api/walgreen/customer/write`, {
         method : "POST",
         body : JSON.stringify({
-            customer_name : `${name}`,
-            customer_phone_email : `${phone}`,
-            customer_comment : `${comment}`
+            email : `${phone}`,
+            name : `${name}`,
+            about_customer : `${comment}`
         }),
         headers : {
             "Content-Type" : "application/json"
