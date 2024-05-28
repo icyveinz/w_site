@@ -32,6 +32,7 @@ $(function () {
 
         const result = verify_fields(name, phone_num, comment);
 
+        // check if alert window is already at the screen. If true - do not toggle notification.
         if (check_activity_before_appending()) {
             switch (result[0]) {
                 case true:
