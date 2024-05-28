@@ -104,3 +104,32 @@
     font-size: 25px
   .our-dignities-core__grid-holder__separated-stack__text-container__comment__mark-blue
     font-size: 25px
+
+
+@media (max-width: 650px)
+  .our-dignities-core__grid-holder
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+    &__networking-container
+      grid-column: 1 / 2
+      grid-row: 1 / 2
+    &__agreement-container
+      grid-column: 1 / 2
+      grid-row: 3 / 4
+    &__cargo-container
+      grid-column: 1 / 2
+      grid-row: 2 / 3
+    &__operator-container
+      grid-column: 1 / 2
+      grid-row: 4 / 5
+    &__separated-stack
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+  .our-dignities-core__grid-holder__separated-stack__text-container__title
+    font-size: 3vw
+  .our-dignities-core__grid-holder__separated-stack__text-container__comment
+    font-size: 2.5vw
+  .our-dignities-core__grid-holder__separated-stack__text-container__comment__mark-green
+    font-size: 2.7vw
+  .our-dignities-core__grid-holder__separated-stack__text-container__comment__mark-blue
+    font-size: 2.7vw

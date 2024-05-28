@@ -60,3 +60,13 @@
             font-family: yanone-light
             font-size: 1.6vw
             color: white
+
+
+@media (max-width: 650px)
+  .our-activities-core__container
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-columns: repeat(1, 1fr)
+    &__maps-layout
+      grid-row: 1 / 2
+    &__about-us-layout
+      grid-row: 2 / 3
