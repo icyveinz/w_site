@@ -2,18 +2,16 @@
 @import "../assets/colors"
 @import "../assets/mixins"
 
-.return-to-main-centered
+.agreement-public-container
   @include place-in-center-before-wrapping
-  background-color: white
   &__restricted-width
-    max-width: 1400px
-    width: 100%
+    @include restricted-1400-wrapper
+  &__section
+    width: 80%
     display: flex
-    flex-direction: row
+    flex-direction: column
     align-items: center
-    justify-content: center
-    &__a
+    &__header
       font-family: yanone-medium
-      margin-top: 2%
-      color: $main_green
+      color: $main_blue
       font-size: 3vw
