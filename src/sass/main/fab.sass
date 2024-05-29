@@ -1,14 +1,33 @@
-.fab-container
+
+// Local mixin for correct svg sizing
+@mixin svg-size-formatter
+  width: 100%
+  height: auto
+
+@mixin fab-container-formatter
   position: fixed
   left: 3%
   bottom: 5%
-  width: 5%
   border: 0
   background-color: rgba(0, 0, 0, 0)
+
+.fab-container
+  @include fab-container-formatter
+  width: 5%
   &__img
-    width: 100%
-    height: auto
+    @include svg-size-formatter
+
+.mobile-fab-container
+  @include fab-container-formatter
+  width: 10%
+  &__img
+    @include svg-size-formatter
+
 
 @media (max-width: 650px)
   .fab-container
     width: 10%
+    left: 3%
+    bottom: 5%
+    border: 0
+    background-color: rgba(0, 0, 0, 0)
