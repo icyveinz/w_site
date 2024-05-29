@@ -11,6 +11,7 @@ gulp.task('serve', function() {
         server: {baseDir: 'dist'}
     });
     gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("src/**/*.html").on('change', browserSync.reload); // reload on any changes in other html files.
 })
 
 gulp.task('styles', function() {
@@ -32,6 +33,12 @@ gulp.task('html-minimizer', function() { // minimize the html files
         .pipe(htmlmin({collapseWhitespace : true}))
         .pipe(gulp.dest('dist'))
 });
+
+gulp.task('html-minimizer-additional', function() {
+    return gulp.src('src/**/*.html')
+        .pipe(htmlmin({collapseWhitespace : true}))
+        .pipe(gulp.dest('dist'))
+})
 
 gulp.task('plugins-mover', function() { // Move all CSS plugins to the dist.
     return gulp.src("src/css/*.css").pipe(gulp.dest('dist/css'))
@@ -73,6 +80,7 @@ gulp.task("default", gulp.parallel(
     'styles',
     'checker',
     'html-minimizer',
+    'html-minimizer-additional',
     'plugins-mover',
     'scripts-mover',
     'js-library-mover',
