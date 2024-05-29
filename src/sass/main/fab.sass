@@ -14,20 +14,26 @@
 .fab-container
   @include fab-container-formatter
   width: 5%
+  visibility: visible
   &__img
     @include svg-size-formatter
 
 .mobile-fab-container
   @include fab-container-formatter
   width: 10%
+  visibility: hidden
   &__img
     @include svg-size-formatter
 
 
 @media (max-width: 650px)
   .fab-container
-    width: 10%
-    left: 3%
-    bottom: 5%
-    border: 0
-    background-color: rgba(0, 0, 0, 0)
+    visibility: hidden
+  .mobile-fab-container
+    visibility: visible
+
+@media (min-width: 650px)
+  .fab-container
+    visibility: visible
+  .mobile-fab-container
+    visibility: hidden
