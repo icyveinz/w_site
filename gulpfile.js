@@ -75,6 +75,12 @@ gulp.task('fonts-mover', function() {
         .pipe(gulp.dest("dist/assets/fonts"))
 });
 
+gulp.task('favicon-mover', function() {
+    return gulp
+        .src("src/*.+(png|xml|ico|webmanifest|svg)")
+        .pipe(gulp.dest("dist"))
+});
+
 
 gulp.task("default", gulp.parallel(
     'serve',
@@ -87,5 +93,6 @@ gulp.task("default", gulp.parallel(
     'js-library-mover',
     'js-compressor',
     'images-mover',
-    'fonts-mover'
+    'fonts-mover',
+    "favicon-mover"
 ));
