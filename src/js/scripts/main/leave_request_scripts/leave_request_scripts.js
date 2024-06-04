@@ -2,6 +2,7 @@ import verify_fields from "./verify_fields.js";
 import format_the_object from "./format_the_object.js";
 import display_and_hide_notification from "./display_and_hide_notification.js";
 import write_customer_request from "./write_customer_request.js";
+import check_activity_before_appending from "./check_activity_before_appending.js";
 
 $(function () {
     const button = $(".leave-request-div__request-frame-div__button");
@@ -31,13 +32,16 @@ $(function () {
 
         const result = verify_fields(name, phone_num, comment);
 
-        switch (result[0]) {
-            case true:
-                write_customer_request(name, phone_num, comment);
-                return
-            case false:
-                display_and_hide_notification(format_the_object(false, result[1]))
-                return;
+        // check if alert window is already at the screen. If true - do not toggle notification.
+        if (check_activity_before_appending()) {
+            switch (result[0]) {
+                case true:
+                    write_customer_request(name, phone_num, comment);
+                    return
+                case false:
+                    display_and_hide_notification(format_the_object(false, result[1]))
+                    return;
+            }
         }
     })
 });

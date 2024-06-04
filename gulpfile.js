@@ -11,6 +11,7 @@ gulp.task('serve', function() {
         server: {baseDir: 'dist'}
     });
     gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("src/**/*.html").on('change', browserSync.reload); // reload on any changes in other html files.
 })
 
 gulp.task('styles', function() {
@@ -25,6 +26,7 @@ gulp.task('styles', function() {
 gulp.task('checker', function() {
     gulp.watch('src/sass/**/*.+(sass|scss|css)', gulp.parallel('styles')); // ** we track all folders inside ; +(x|y|z) we track 3 file formats inside.
     gulp.watch("src/*.html").on('change', gulp.parallel('html-minimizer')); // on change of html in src we minimize it and place in dist
+    gulp.watch("src/**/*.html").on('change', gulp.parallel('html-minimizer-additional'));
 });
 
 gulp.task('html-minimizer', function() { // minimize the html files
@@ -32,6 +34,12 @@ gulp.task('html-minimizer', function() { // minimize the html files
         .pipe(htmlmin({collapseWhitespace : true}))
         .pipe(gulp.dest('dist'))
 });
+
+gulp.task('html-minimizer-additional', function() {
+    return gulp.src('src/**/*.html')
+        .pipe(htmlmin({collapseWhitespace : true}))
+        .pipe(gulp.dest('dist'))
+})
 
 gulp.task('plugins-mover', function() { // Move all CSS plugins to the dist.
     return gulp.src("src/css/*.css").pipe(gulp.dest('dist/css'))
@@ -67,16 +75,24 @@ gulp.task('fonts-mover', function() {
         .pipe(gulp.dest("dist/assets/fonts"))
 });
 
+gulp.task('favicon-mover', function() {
+    return gulp
+        .src("src/*.+(png|xml|ico|webmanifest|svg)")
+        .pipe(gulp.dest("dist"))
+});
+
 
 gulp.task("default", gulp.parallel(
     'serve',
     'styles',
     'checker',
     'html-minimizer',
+    'html-minimizer-additional',
     'plugins-mover',
     'scripts-mover',
     'js-library-mover',
     'js-compressor',
     'images-mover',
-    'fonts-mover'
+    'fonts-mover',
+    "favicon-mover"
 ));

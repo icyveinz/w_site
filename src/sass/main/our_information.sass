@@ -12,11 +12,14 @@
     width: 100%
     display: grid
     grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(1, 1fr)
     &__maps-layout
+      grid-row: 1 / 2
       grid-column: 1 / 2
       width: 100%
     &__about-us-layout
       background-color: $main_blue
+      grid-row: 1 / 2
       grid-column: 2 / 3
       width: 100%
       display: flex
@@ -60,3 +63,48 @@
             font-family: yanone-light
             font-size: 1.6vw
             color: white
+
+
+@media (max-width: 750px)
+  .our-information-core__container
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-columns: repeat(1, 1fr)
+    &__maps-layout
+      grid-column: 1 / 2
+      grid-row: 1 / 2
+    &__about-us-layout
+      grid-column: 1 / 2
+      grid-row: 2 / 3
+  .our-information-core__container__about-us-layout__container
+      &__big-title
+        font-family: yanone-medium
+        font-size: 4vw
+        color: white
+      &__email
+        margin-top: 5%
+        font-family: yanone-light
+        font-size: 3.5vw
+        color: white
+        text-decoration: none
+      &__phone
+        margin-top: 3%
+        font-family: yanone-light
+        font-size: 3.5vw
+        color: white
+        text-decoration: none
+      &__requisites
+        margin-top: 10%
+        font-family: yanone-medium
+        font-size: 4vw
+        color: white
+      &__additional-container
+        margin-top: 5%
+        display: flex
+        flex-direction: column
+        width: 100%
+        align-items: flex-start
+        &__text
+          margin-top: 1%
+          font-family: yanone-light
+          font-size: 2.6vw
+          color: white

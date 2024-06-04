@@ -1,0 +1,30 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+@import "../assets/mixins"
+
+.agreement-public-container
+  @include place-in-center-before-wrapping
+  &__restricted-width
+    @include restricted-1400-wrapper
+  &__section
+    width: 80%
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__header
+      font-family: yanone-medium
+      color: $main_blue
+      font-size: 3vw
+    &__unordered-list
+      &__li
+        margin-top: 2%
+        font-family: rubik-regular
+        font-size: 1.8vw
+    &__paragraph
+      font-family: yanone-light
+      font-size: 2.3vw
+      color: black
+      &__mail-to
+        font-family: yanone-light
+        font-size: 2.3vw
+        color: $main_green

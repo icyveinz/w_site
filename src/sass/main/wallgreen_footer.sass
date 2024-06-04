@@ -4,9 +4,9 @@
 
 .wallgreen-footer-core
   @include place-in-center-before-wrapping
-  background-color: $main_green
   &__max-width
     @include restricted-2400-wrapper
+    background-color: $main_green
   &__grid-container
     padding: 2.3% 0
     width: 90%
@@ -15,6 +15,25 @@
     &__text-styling
       font-family: rubik-regular
       font-size: 1.3vw
+      color: white
+    &__left-container
+      grid-column: 1 / 2
+      display: flex
+      flex-direction: row
+      align-items: center
+    &__center-container
+      grid-column: 2 / 3
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+
+@media (max-width: 750px)
+  .wallgreen-footer-core__grid-container
+    &__text-styling
+      font-family: rubik-regular
+      font-size: 1.7vw
       color: white
     &__left-container
       grid-column: 1 / 2

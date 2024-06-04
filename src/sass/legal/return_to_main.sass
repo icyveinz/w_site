@@ -1,0 +1,19 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+@import "../assets/mixins"
+
+.return-to-main-centered
+  @include place-in-center-before-wrapping
+  background-color: white
+  &__restricted-width
+    max-width: 1400px
+    width: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    &__a
+      font-family: yanone-medium
+      margin-top: 2%
+      color: $main_green
+      font-size: 3vw

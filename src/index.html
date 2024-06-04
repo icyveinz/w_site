@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Walgreen Logistics</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/main/disable-margins-h-html-body.css">
     <link rel="stylesheet" href="css/main/fixed_menu.css">
     <link rel="stylesheet" href="css/main/leave_request_title.css">
@@ -26,20 +36,21 @@
     <script src="js/libraries/aos.js"></script>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=57dffcef-37e9-4061-a8d3-8219e6b04fe4" type="text/javascript"></script>
-    <script src="js/scripts/yandex_maps_activator/yamaps_init.js"></script>
+    <script src="js/scripts/main/yandex_maps_activator/yamaps_init.js"></script>
 
-    <script src="js/scripts/visiual_init/visual_activator.js"></script>
-    <script src="js/scripts/fixed_menu_scripts/fixed_menu_scripts.js"></script>
+    <script src="js/scripts/main/visiual_init/visual_activator.js"></script>
+    <script src="js/scripts/main/fixed_menu_scripts/fixed_menu_scripts.js"></script>
 
-    <script type="module" src="js/scripts/leave_request_scripts/display_and_hide_notification.js"></script>
-    <script type="module" src="js/scripts/leave_request_scripts/format_the_object.js"></script>
-    <script type="module" src="js/scripts/leave_request_scripts/verify_fields.js"></script>
-    <script type="module" src="js/scripts/leave_request_scripts/write_customer_request.js"></script>
-    <script type="module" src="js/scripts/leave_request_scripts/leave_request_scripts.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/display_and_hide_notification.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/format_the_object.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/verify_fields.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/write_customer_request.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/check_activity_before_appending.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/leave_request_scripts.js"></script>
 
-    <script type="module" src="js/scripts/our_reliability_scripts/animateValue.js"></script>
-    <script type="module" src="js/scripts/our_reliability_scripts/initAnimations.js"></script>
-    <script type="module" src="js/scripts/our_reliability_scripts/our_reliability_scripts.js"></script>
+    <script type="module" src="js/scripts/main/our_reliability_scripts/animateValue.js"></script>
+    <script type="module" src="js/scripts/main/our_reliability_scripts/initAnimations.js"></script>
+    <script type="module" src="js/scripts/main/our_reliability_scripts/our_reliability_scripts.js"></script>
 </head>
 <body>
 
@@ -116,10 +127,12 @@
         <div
                 id="company-description-section"
                 class="company-description-core"
-                data-aos="zoom-out-down"
         >
             <div class="company-description-core__restricted-width">
-                <section class="company-description-core__grid-container">
+                <section
+                        class="company-description-core__grid-container"
+                        data-aos="zoom-out-down"
+                >
                     <h3 class="company-description-core__grid-container__h3">О компании</h3>
                     <div class="company-description-core__grid-container__separator"></div>
                     <p class="company-description-core__grid-container__p">Компания <mark class="company-description-core__grid-container__p__mark-green">Walgreen Logistics</mark> является частью международной группы компаний-перевозчиков и&nbsp;таможенных брокеров <mark class="company-description-core__grid-container__p__mark-blue">Walgreen Group</mark>. Цель нашей компании&nbsp;&mdash; обеспечить своих клиентов оптимальными логистическими и&nbsp;таможенными решениями, которые помогут сократить временные и&nbsp;финансовые издержки, связанные с&nbsp;внешней экономической деятельностью. Мы&nbsp;нацелены на&nbsp;долгосрочное сотрудничество и&nbsp;всегда готовы предоставить своим клиентам гибкие и&nbsp;взаимовыгодные партнёрские условия.</p>
@@ -255,15 +268,15 @@
     </div>
 
     <div class="our-reliability-centered">
-        <div
-                id="reliability-animation"
-                class="our-reliability-core"
-                data-aos="flip-down"
-                data-aos-duration="1500"
-                data-aos-id="activate-counters"
-        >
+        <div class="our-reliability-core">
             <img class="our-reliability-core__image" src="assets/images/plane_background2.webp" alt="">
-            <section class="our-reliability-core__absolute-container">
+            <section
+                    id="reliability-animation"
+                    class="our-reliability-core__absolute-container"
+                    data-aos="flip-down"
+                    data-aos-duration="1500"
+                    data-aos-id="activate-counters"
+            >
                 <h3 class="our-reliability-core__absolute-container__h3-title">
                     Цифры, которые подтверждают нашу надёжность
                 </h3>
@@ -310,7 +323,9 @@
                 </div>
                 <section
                         class="our-services-core__grid-container"
-                        data-aos="zoom-out-right"
+                        data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1000"
                 >
                     <img class="our-services-core__grid-container__image-placeholder" src="assets/images/services_grid1.webp" alt="">
                     <div class="our-services-core__grid-container__text-placeholder">
@@ -324,7 +339,9 @@
                 </section>
                 <section
                         class="our-services-core__grid-container"
-                        data-aos="zoom-out-left"
+                        data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1000"
                 >
                     <div class="our-services-core__grid-container__inv-text-placeholder">
                         <h4 class="our-services-core__grid-container__grid-text__title">
@@ -338,7 +355,9 @@
                 </section>
                 <section
                         class="our-services-core__grid-container"
-                        data-aos="zoom-out-right"
+                        data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1000"
                 >
                     <img class="our-services-core__grid-container__image-placeholder" src="assets/images/services_grid3.webp" alt="">
                     <div class="our-services-core__grid-container__text-placeholder">
@@ -461,6 +480,8 @@
     </div>
 
     <a class="fab-container" href="#top-page-section"><img class="fab-container__img" src="assets/images/fab.svg" alt=""></a>
+    <a class="mobile-fab-container" href="#top-page-section"><img class="mobile-fab-container__img" src="assets/images/mobile-fab.svg" alt=""></a>
+
 </main>
 
 <footer>
@@ -476,7 +497,7 @@
                     <h6 class="wallgreen-footer-core__grid-container__text-styling">
                         ©2020 Walgreen Logistics
                     </h6>
-                    <a class="wallgreen-footer-core__grid-container__text-styling" href="">
+                    <a class="wallgreen-footer-core__grid-container__text-styling" href="/legal">
                         Политика конфиденциальности
                     </a>
                 </div>
