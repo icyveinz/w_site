@@ -1,13 +1,10 @@
 import format_the_object from "./format_the_object.js";
 import display_and_hide_notification from "./display_and_hide_notification.js";
+import route from "../url_routes.js";
 
 function write_customer_request(name, phone, comment) {
 
-    const route = {
-        url : "http://localhost:8000"
-    }
-
-    fetch(`${route.url}/api/walgreen/customer/write`, {
+    fetch(`${route.api_url}/api/walgreen/customer/write`, {
         method : "POST",
         body : JSON.stringify({
             email : `${phone}`,
