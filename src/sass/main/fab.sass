@@ -1,3 +1,5 @@
+@import "../assets/mixins"
+
 
 // Local mixin for correct svg sizing
 @mixin svg-size-formatter
@@ -11,6 +13,11 @@
   bottom: 5%
   border: 0
   background-color: rgba(0, 0, 0, 0)
+
+.fab-container-core
+  @include place-in-center-before-wrapping
+  &__restricted
+    @include restricted-2400-wrapper
 
 .fab-container
   @include fab-container-formatter
