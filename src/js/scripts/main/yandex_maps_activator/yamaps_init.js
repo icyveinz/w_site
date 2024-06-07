@@ -1,3 +1,5 @@
+import maps_interface_builder from "./maps_interface_builder.js";
+
 ymaps.ready(init);
 
 function init() {
@@ -18,7 +20,7 @@ function init() {
             // Свойства.
             properties: {
                 // Контент метки.
-                iconContent: 'ООО «УОЛГРИН ЛОГИСТИКС РУС» ',
+                iconContent: maps_interface_builder(window.screen.width),
                 hintContent: 'Мичуринский пр-т. Олимпийская Деревня, дом 4к1, 2-й этаж, офис 3 '
             }
         }, {
