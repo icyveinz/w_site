@@ -57,7 +57,8 @@
     <script src="js/libraries/aos.js"></script>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=57dffcef-37e9-4061-a8d3-8219e6b04fe4" type="text/javascript"></script>
-    <script src="js/scripts/main/yandex_maps_activator/yamaps_init.js"></script>
+    <script type="module" src="js/scripts/main/yandex_maps_activator/maps_interface_builder.js"></script>
+    <script type="module" src="js/scripts/main/yandex_maps_activator/yamaps_init.js"></script>
 
     <script type="module" src="js/scripts/main/url_routes.js"></script>
 
@@ -262,25 +263,25 @@
                 </section>
                 <div class="our-activities-core__countries-layout-container">
                     <div class="our-activities-core__countries-layout-container__image-comment-container">
-                        <img class="our-activities-core__countries-layout-container__image-comment-container__img" src="assets/images/china.png">
+                        <img class="our-activities-core__countries-layout-container__image-comment-container__img" src="assets/images/china.png" alt="">
                         <span class="our-activities-core__countries-layout-container__image-comment-container__comment">
                     Китай
                 </span>
                     </div>
                     <div class="our-activities-core__countries-layout-container__image-comment-container">
-                        <img class="our-activities-core__countries-layout-container__image-comment-container__img" src="assets/images/european-union.png">
+                        <img class="our-activities-core__countries-layout-container__image-comment-container__img" src="assets/images/european-union.png" alt="">
                         <span class="our-activities-core__countries-layout-container__image-comment-container__comment">
                     Европейский Союз
                 </span>
                     </div>
                     <div class="our-activities-core__countries-layout-container__image-comment-container">
-                        <img class="our-activities-core__countries-layout-container__image-comment-container__img" src="assets/images/united-states.png">
+                        <img class="our-activities-core__countries-layout-container__image-comment-container__img" src="assets/images/united-states.png" alt="">
                         <span class="our-activities-core__countries-layout-container__image-comment-container__comment">
                     США
                 </span>
                     </div>
                     <div class="our-activities-core__countries-layout-container__image-comment-container">
-                        <img class="our-activities-core__countries-layout-container__image-comment-container__img" src="assets/images/russia.png">
+                        <img class="our-activities-core__countries-layout-container__image-comment-container__img" src="assets/images/russia.png" alt="">
                         <span class="our-activities-core__countries-layout-container__image-comment-container__comment">
                     Россия
                 </span>
@@ -502,8 +503,17 @@
         </div>
     </div>
 
-    <a class="fab-container" href="#top-page-section"><img class="fab-container__img" src="assets/images/fab.svg" alt=""></a>
-    <a class="mobile-fab-container" href="#top-page-section"><img class="mobile-fab-container__img" src="assets/images/mobile-fab.svg" alt=""></a>
+    <div class="fab-container-core">
+        <div class="fab-container-core__restricted">
+            <a class="fab-container" href="#top-page-section"><img class="fab-container__img" src="assets/images/fab.svg" alt=""></a>
+        </div>
+    </div>
+
+    <div class="fab-container-core">
+        <div class="fab-container-core__restricted">
+            <a class="mobile-fab-container" href="#top-page-section"><img class="mobile-fab-container__img" src="assets/images/mobile-fab.svg" alt=""></a>
+        </div>
+    </div>
 
 </main>
 
