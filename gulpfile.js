@@ -81,7 +81,6 @@ gulp.task('favicon-mover', function() {
         .pipe(gulp.dest("dist"))
 });
 
-
 gulp.task("default", gulp.parallel(
     'serve',
     'styles',
