@@ -1,0 +1,44 @@
+@import "../assets/colors"
+@import "../assets/fonts"
+
+.burger-menu-core
+  //position: fixed should be turned on in the final steps
+  width: 100%
+  background-color: white
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__wrapped-and-centered-container
+    width: 80%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    &__button
+      width: 20%
+      background-color: rgba(0, 0, 0, 0)
+      border: 0
+      cursor: pointer
+    &__svg
+      width: 100%
+      height: auto
+  &__unwrapped-and-centered-container
+    width: 80%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &__navigation-container
+      margin-top: 2%
+      display: flex
+      flex-direction: row
+      width: 100%
+      justify-content: center
+      align-items: center
+      &__a
+        font-size: 6vw
+        font-family: yanone-medium
+        color: $main_blue
+        text-transform: uppercase
+        cursor: pointer
+        transition: all 1s
+        text-decoration: none
