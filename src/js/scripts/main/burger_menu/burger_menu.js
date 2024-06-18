@@ -24,9 +24,6 @@ $(function() {
                     $('.burger-menu-core__unwrapped-and-centered-container').remove();
                 }, 800);
             }, 800);
-            // setTimeout(() => {
-            //     $('.burger-menu-core__unwrapped-and-centered-container').remove();
-            // }, 900)
             condition = !condition;
         }
     });
