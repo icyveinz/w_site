@@ -2,19 +2,20 @@
 @import "../assets/fonts"
 
 .burger-menu-core
-  //position: fixed should be turned on in the final steps
+  position: fixed // should be turned on in the final steps
   width: 100%
   background-color: white
   display: none
   flex-direction: column
   align-items: center
+  z-index: 50
   &__wrapped-and-centered-container
-    width: 80%
+    width: 100%
     display: flex
     flex-direction: row
     justify-content: flex-start
   &__unwrapped-and-centered-container
-    width: 80%
+    width: 90%
     display: flex
     flex-direction: column
     align-items: center
@@ -27,7 +28,7 @@
       justify-content: center
       align-items: center
       &__a-navigation
-        font-size: 10vw
+        font-size: 8vw
         font-family: yanone-medium
         color: $main_blue
         text-transform: uppercase
@@ -35,7 +36,7 @@
         transition: all 1s
         text-decoration: none
       &__a-call-button
-        font-size: 8vw
+        font-size: 6vw
         font-family: rubik-regular
         border: 0
         padding: 7% 14%
@@ -61,7 +62,7 @@
   background: transparent
   width: 40px
   height: 26px
-  margin: 30px auto
+  margin: 30px
 
 .burger::before,
 .burger::after
