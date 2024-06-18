@@ -13,7 +13,20 @@ $(function() {
             condition = !condition;
         }
         else {
-            $('.burger-menu-core__unwrapped-and-centered-container').empty();
+            const node = document.querySelectorAll('.burger-menu-core__unwrapped-and-centered-container__navigation-container');
+            node.forEach(element => {
+                element.classList.add('animate__rotateOutUpRight')
+            });
+            setTimeout(() => {
+                let node = document.querySelector('.burger-menu-core__unwrapped-and-centered-container');
+                node.classList.add('animate__fadeOutUp');
+                setTimeout(() => {
+                    $('.burger-menu-core__unwrapped-and-centered-container').remove();
+                }, 800);
+            }, 800);
+            // setTimeout(() => {
+            //     $('.burger-menu-core__unwrapped-and-centered-container').remove();
+            // }, 900)
             condition = !condition;
         }
     });
