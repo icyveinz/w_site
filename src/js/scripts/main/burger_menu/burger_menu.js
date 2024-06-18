@@ -7,9 +7,10 @@ $(function() {
         console.log('button is clicked');
         if (!condition) {
             $('.burger-menu-core').append(extract_root_container());
-            setTimeout(() => {
-                $('.burger-menu-core__unwrapped-and-centered-container').append(extract_menu_template());
-            }, 900);
+            $('.burger-menu-core__unwrapped-and-centered-container').append(extract_menu_template());
+            // setTimeout(() => {
+            //     $('.burger-menu-core__unwrapped-and-centered-container').append(extract_menu_template());
+            // }, 900);
             condition = !condition;
         }
         else {
