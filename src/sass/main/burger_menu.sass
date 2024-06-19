@@ -1,0 +1,131 @@
+@import "../assets/colors"
+@import "../assets/fonts"
+
+.burger-menu-core
+  position: fixed // should be turned on in the final steps
+  width: 100%
+  background-color: white
+  display: none
+  flex-direction: column
+  align-items: center
+  z-index: 50
+  &__wrapped-and-centered-container
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+  &__unwrapped-and-centered-container
+    width: 95%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding-bottom: 10%
+    &__navigation-container
+      margin-top: 8%
+      display: flex
+      flex-direction: row
+      width: 100%
+      justify-content: center
+      align-items: center
+      &__a-navigation
+        font-size: 7vw
+        font-family: yanone-medium
+        color: $main_blue
+        text-transform: uppercase
+        cursor: pointer
+        transition: all 1s
+        text-decoration: none
+      &__a-call-button
+        font-size: 4vw
+        font-family: rubik-regular
+        border: 0
+        padding: 7% 14%
+        border-radius: 10px
+        background-color: $main_blue
+        color: white
+        cursor: pointer
+        transition: all 0.5s
+        text-decoration: none
+
+
+// https://html-css.blog/css/burger-menyu-na-html-i-css/
+
+.burger-checkbox
+  position: absolute
+  visibility: hidden
+
+.burger
+  cursor: pointer
+  display: block
+  position: relative
+  border: none
+  background: transparent
+  width: 40px
+  height: 26px
+  margin: 30px auto
+
+.burger::before,
+.burger::after
+  content: ''
+  left: 0
+  position: absolute
+  display: block
+  width: 100%
+  height: 4px
+  border-radius: 10px
+  background: #000
+
+.burger::before
+  top: 0
+  box-shadow: 0 11px 0 #000
+  transition: box-shadow .3s .15s, top .3s .15s, transform .3s
+
+.burger::after
+  bottom: 0
+  transition: bottom .3s .15s, transform .3s
+
+.burger-checkbox:checked + .burger::before
+  top: 11px
+  transform: rotate(45deg)
+  box-shadow: 0 6px 0 rgba(0,0,0,0)
+  transition: box-shadow .15s, top .3s, transform .3s .15s
+
+.burger-checkbox:checked + .burger::after
+  bottom: 11px
+  transform: rotate(-45deg)
+  transition: bottom .3s, transform .3s .15s
+
+
+@media (max-width: 749px)
+  .burger-menu-core
+    display: flex
+
+@media (max-width: 650px)
+  .burger
+    margin: 25px auto
+
+@media (max-width: 600px)
+  .burger
+    margin: 22.5px auto
+
+@media (max-width: 550px)
+  .burger
+    margin: 20px auto
+
+@media (max-width: 500px)
+  .burger
+    margin: 15px auto
+
+@media (max-width: 450px)
+  .burger
+    margin: 12.5px auto
+
+@media (max-width: 400px)
+  .burger
+    margin: 10px auto
+
+@media (max-width: 350px)
+  .burger
+    margin: 8px auto
+    width: 35px

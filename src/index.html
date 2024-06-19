@@ -55,6 +55,7 @@
 
     <link rel="stylesheet" href="css/main/disable-margins-h-html-body.css">
     <link rel="stylesheet" href="css/main/fixed_menu.css">
+    <link rel="stylesheet" href="css/main/burger_menu.css">
     <link rel="stylesheet" href="css/main/leave_request_title.css">
     <link rel="stylesheet" href="css/main/company_description.css">
     <link rel="stylesheet" href="css/main/our_dignities.css">
@@ -78,25 +79,39 @@
     <script type="module" src="js/scripts/main/yandex_maps_activator/maps_interface_builder.js"></script>
     <script type="module" src="js/scripts/main/yandex_maps_activator/yamaps_init.js"></script>
 
-    <script type="module" src="js/scripts/main/url_routes.js"></script>
+    <script type="module" src="js/scripts/main/url_routes-min.js"></script>
 
-    <script src="js/scripts/main/visiual_init/visual_activator.js"></script>
-    <script src="js/scripts/main/fixed_menu_scripts/fixed_menu_scripts.js"></script>
+    <script src="js/scripts/main/visiual_init/visual_activator-min.js"></script>
+    <script src="js/scripts/main/fixed_menu_scripts/fixed_menu_scripts-min.js"></script>
 
-    <script type="module" src="js/scripts/main/leave_request_scripts/display_and_hide_notification.js"></script>
-    <script type="module" src="js/scripts/main/leave_request_scripts/format_the_object.js"></script>
-    <script type="module" src="js/scripts/main/leave_request_scripts/verify_fields.js"></script>
-    <script type="module" src="js/scripts/main/leave_request_scripts/write_customer_request.js"></script>
-    <script type="module" src="js/scripts/main/leave_request_scripts/check_activity_before_appending.js"></script>
-    <script type="module" src="js/scripts/main/leave_request_scripts/leave_request_scripts.js"></script>
+    <script type="module" src="js/scripts/main/burger_menu/extract_root_container-min.js"></script>
+    <script type="module" src="js/scripts/main/burger_menu/extract_menu_template-min.js"></script>
+    <script type="module" src="js/scripts/main/burger_menu/fold_menu_function-min.js"></script>
+    <script type="module" src="js/scripts/main/burger_menu/burger_menu-min.js"></script>
+    <script type="module" src="js/scripts/main/burger_menu/hover_animation_burger_menu-min.js"></script>
 
-    <script type="module" src="js/scripts/main/our_reliability_scripts/animateValue.js"></script>
-    <script type="module" src="js/scripts/main/our_reliability_scripts/initAnimations.js"></script>
-    <script type="module" src="js/scripts/main/our_reliability_scripts/our_reliability_scripts.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/display_and_hide_notification-min.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/format_the_object-min.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/verify_fields-min.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/write_customer_request-min.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/check_activity_before_appending-min.js"></script>
+    <script type="module" src="js/scripts/main/leave_request_scripts/leave_request_scripts-min.js"></script>
+
+    <script type="module" src="js/scripts/main/our_reliability_scripts/animateValue-min.js"></script>
+    <script type="module" src="js/scripts/main/our_reliability_scripts/initAnimations-min.js"></script>
+    <script type="module" src="js/scripts/main/our_reliability_scripts/our_reliability_scripts-min.js"></script>
 </head>
 <body>
 
 <header>
+    <div class="burger-menu-core">
+        <div class="burger-menu-core__wrapped-and-centered-container">
+            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+            <label class="burger" for="burger-checkbox"></label>
+        </div>
+    </div>
+
+
     <div class="menu-top-level">
         <nav class="menu-top-level__restricted-width">
             <img class="menu-top-level__logo-image" src="assets/logos/wall_logo.png" alt="walgreen logistics logo">
@@ -352,10 +367,10 @@
         </div>
     </div>
 
-    <div class="our-services-centered">
+    <div class="our-services-centered" id="our-services-section">
         <section class="our-services-core">
             <div class="our-services-core__restricted-width">
-                <div class="our-services-core__container" id="our-services-section">
+                <div class="our-services-core__container">
                     <h3 class="our-services-core__container__title">
                         Наши услуги
                     </h3>
@@ -472,7 +487,7 @@
         <div id="our-information-section" class="our-information-core__max-width">
             <div class="our-information-core__container">
                 <div id="yandex-maps" class="our-information-core__container__maps-layout"></div>
-                <div class="our-information-core__container__about-us-layout">
+                <div class="our-information-core__container__about-us-layout" id="contacts-mobile-anchor">
                     <section class="our-information-core__container__about-us-layout__container">
                         <h4 class="our-information-core__container__about-us-layout__container__big-title">
                             ООО &laquo;УОЛГРИН ЛОГИСТИКС РУС&raquo;

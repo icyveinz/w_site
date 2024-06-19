@@ -4,7 +4,7 @@
 .menu-top-level
   position: fixed
   width: 100%
-  display: flex
+  display: none
   flex-direction: row
   justify-content: center
   background-color: white
@@ -49,3 +49,7 @@
     font-size: 40px
   .menu-top-level__a-call-button
     font-size: 30px
+
+@media (min-width: 750px)
+  .menu-top-level
+    display: flex
