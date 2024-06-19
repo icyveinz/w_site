@@ -10,7 +10,7 @@ function extract_menu_template() {
                 </a>
             </div>
             <div class="burger-menu-core__unwrapped-and-centered-container__navigation-container animate__animated animate__rotateInDownLeft">
-                <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#our-information-section">
+                <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#contacts-mobile-anchor">
                     Контакты
                 </a>
             </div>
