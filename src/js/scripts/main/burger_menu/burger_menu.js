@@ -1,8 +1,9 @@
 import extract_menu_template from "./extract_menu_template.js";
 import extract_root_container from "./extract_root_container.js";
+import fold_menu_function from "./fold_menu_function.js";
 
 $(function() {
-    let condition = false
+    let condition = false;
     $('.burger').on('click', function() {
         console.log('button is clicked');
         if (!condition) {
@@ -14,18 +15,14 @@ $(function() {
             condition = !condition;
         }
         else {
-            const node = document.querySelectorAll('.burger-menu-core__unwrapped-and-centered-container__navigation-container');
-            node.forEach(element => {
-                element.classList.add('animate__rotateOutUpRight')
-            });
-            setTimeout(() => {
-                let node = document.querySelector('.burger-menu-core__unwrapped-and-centered-container');
-                node.classList.add('animate__fadeOutUp');
-                setTimeout(() => {
-                    $('.burger-menu-core__unwrapped-and-centered-container').remove();
-                }, 800);
-            }, 800);
+            fold_menu_function();
             condition = !condition;
         }
+    });
+    // Fold menu when <a> is clicked
+    $('.burger-menu-core').on('click', '.burger-menu-core__unwrapped-and-centered-container .burger-menu-core__unwrapped-and-centered-container__navigation-container .burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation', function() {
+        fold_menu_function();
+        $('#burger-checkbox').prop('checked', false);
+        condition = false;
     });
 })
