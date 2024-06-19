@@ -1,7 +1,7 @@
 function fold_menu_function(condition) {
     const node = document.querySelectorAll('.burger-menu-core__unwrapped-and-centered-container__navigation-container');
     node.forEach(element => {
-        element.classList.add('animate__rotateOutUpRight')
+        element.classList.add('animate__fadeOutUp')
     });
     setTimeout(() => {
         let node = document.querySelector('.burger-menu-core__unwrapped-and-centered-container');
