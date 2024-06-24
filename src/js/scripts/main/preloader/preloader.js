@@ -1,3 +1,5 @@
+// Preloader script logic
+
 $(function() {
     $(document.body).css({
         "height" : "100%",
