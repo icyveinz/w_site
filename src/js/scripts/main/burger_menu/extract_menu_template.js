@@ -1,3 +1,5 @@
+// return menu template for future actions
+
 function extract_menu_template() {
     return `<div class="burger-menu-core__unwrapped-and-centered-container__navigation-container animate__animated animate__slideInDown">
                 <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#company-description-section">
