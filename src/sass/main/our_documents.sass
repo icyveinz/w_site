@@ -2,7 +2,12 @@
 @import "../assets/colors"
 @import "../assets/mixins"
 
-@mixin grid-content-preset
+//<embed
+//class="our-documents-core__grid-content__document-pdf-holder"
+//src="assets/pdf/wgl-req.pdf"
+//type="application/pdf"
+//>
+
 
 .our-documents-core
   @include place-in-center-before-wrapping
@@ -12,42 +17,19 @@
     @include restricted-1400-wrapper
   &__container
     @include title-and-description-centered-container
-    width: 90% !important
     &__title
       font-family: yanone-medium
       font-size: 4vw
       color: $main_blue
-  &__grid-placeholder
-    width: 100%
-    display: grid
-    grid-template-rows: repeat(auto-fill, 1fr)
-    grid-template-columns: repeat(11, 1fr)
+  &__pdf-presentation-container
     margin-top: 5%
-  &__grid-content
-    &__license
-      @include grid-content-preset
-      grid-column: 2 / 6
-      grid-row: 1 / 2
-    &__contacts
-      @include grid-content-preset
-      grid-column: 7 / 11
-      grid-row: 1 / 2
-    &__ugl
-      @include grid-content-preset
-      grid-column: 4 / 8
-      grid-row: 2 / 3
-    &__document-placeholder
+    width: 80%
+    &__self
+      border-radius: 5px
       width: 100%
-    &__document-pdf-holder
-      height: 30em
-      width: 100%
-      border-radius: 10px
-    &__document-comment
-      text-align: center
-      margin-top: 2% !important
-      font-family: yanone-light
-      font-size: 4vw
-      color: black
+      height: 40em
+
+
 
 
 @media (min-width: 2200px)
