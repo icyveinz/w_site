@@ -2,6 +2,8 @@
 @import "../assets/colors"
 @import "../assets/mixins"
 
+@mixin grid-content-preset
+
 .our-documents-core
   @include place-in-center-before-wrapping
   &__max-width
@@ -14,6 +16,27 @@
       font-family: yanone-medium
       font-size: 4vw
       color: $main_blue
+  &__grid-placeholder
+    width: 100%
+    display: grid
+    grid-template-rows: repeat(4, 1fr)
+    grid-template-columns: repeat(auto-fill, 1fr)
+  &__grid-content
+    &__license
+      @include grid-content-preset
+      grid-column: 1 / 2
+      grid-row: 1 / 2
+    &__contacts
+      @include grid-content-preset
+      grid-column: 1 / 2
+      grid-row: 3 / 4
+    &__document-placeholder
+      width: 100%
+    &__document-comment
+      font-family: yanone-light
+      font-size: 4vw
+      color: black
+
 
 @media (min-width: 2200px)
   .our-documents-core__container__title
