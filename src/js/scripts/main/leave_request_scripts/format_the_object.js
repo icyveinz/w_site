@@ -11,7 +11,6 @@ function format_the_object(reply, message) {
                     <h3 class="leave-request-div__result_message_form__message-header">Ошибка!</h3>
                     <p class="leave-request-div__result_message_form__message-p">${message}</p>
                 </section>`
-
     }
 }
 

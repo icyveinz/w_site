@@ -1,0 +1,40 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+@import "../assets/mixins"
+
+
+.our-documents-core
+  @include place-in-center-before-wrapping
+  &__max-width
+    @include restricted-2400-wrapper
+  &__restricted-width
+    @include restricted-1400-wrapper
+  &__container
+    @include title-and-description-centered-container
+    &__title
+      font-family: yanone-medium
+      font-size: 4vw
+      color: $main_blue
+  &__pdf-presentation-container
+    margin-top: 5%
+    width: 80%
+    &__self
+      border-radius: 5px
+      width: 100%
+      height: 40em
+      border: 0
+
+
+//#outerContainer #mainContainer div.toolbar
+//  display: none !important /* hide PDF viewer toolbar */
+//
+//#outerContainer #mainContainer #viewerContainer
+//  top: 0 !important /* move doc up into empty bar space */
+
+
+
+
+
+@media (min-width: 2200px)
+  .our-documents-core__container__title
+    font-size: 60px

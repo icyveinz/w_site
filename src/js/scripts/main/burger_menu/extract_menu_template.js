@@ -1,3 +1,5 @@
+// return menu template for future actions
+
 function extract_menu_template() {
     return `<div class="burger-menu-core__unwrapped-and-centered-container__navigation-container animate__animated animate__slideInDown">
                 <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#company-description-section">
@@ -10,13 +12,13 @@ function extract_menu_template() {
                 </a>
             </div>
             <div class="burger-menu-core__unwrapped-and-centered-container__navigation-container animate__animated animate__slideInDown">
-                <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#contacts-mobile-anchor">
-                    Контакты
+                <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#our-documents-section">
+                    Документы
                 </a>
             </div>
             <div class="burger-menu-core__unwrapped-and-centered-container__navigation-container animate__animated animate__slideInDown">
-                <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-call-button" href="tel:84954304177">
-                    8(495)430-41-77
+                <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#contacts-mobile-anchor">
+                    Контакты
                 </a>
             </div>`
 }
