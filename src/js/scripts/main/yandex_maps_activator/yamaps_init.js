@@ -28,7 +28,7 @@ function init() {
             // Иконка метки будет растягиваться под размер ее содержимого.
             preset: 'islands#blackStretchyIcon',
             // Метку можно перемещать.
-            draggable: true
+            draggable: false
         });
 
     myMap.geoObjects
