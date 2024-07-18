@@ -1,3 +1,4 @@
+// Format the message pop-up
 function format_the_object(reply, message) {
     switch (reply) {
         case true:
