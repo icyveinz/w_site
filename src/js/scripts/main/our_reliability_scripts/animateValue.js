@@ -1,3 +1,4 @@
+// Animation logic for counter
 function animateValue(id, start, end, duration) {
     const INTERVAL_TIME = 10;
     if (duration < 100) {
