@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const country_timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: element,
-                start: 'top center',
+                start: 'top bottom-=20%',
                 scrub: true,
-                end: 'bottom center'
+                end: 'bottom bottom-=20%',
+                // markers: true
             }
         });
         country_timeline
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .from(element.querySelector('span'), {
                 opacity: 0,
-                fontSize: 0,
+                transform: 'scale(0)',
                 duration: 1
             })
     })
