@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
             stagger: 0.2
         })
         .from(document.querySelectorAll('.what-u-get-core__pros-container__single-layout__title-comment-container__title'), {
-            xPercent: 20,
+            xPercent: 10,
             opacity: 0,
             duration: 2,
             stagger: 0.2
         })
         .from(document.querySelectorAll('.what-u-get-core__pros-container__single-layout__title-comment-container__comment'), {
-            xPercent: 20,
+            xPercent: 10,
             opacity: 0,
             duration: 1,
             stagger: 0.2
