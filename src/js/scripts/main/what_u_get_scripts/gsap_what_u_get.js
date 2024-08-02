@@ -4,16 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const pros_timeline = gsap.timeline({
         scrollTrigger: {
             trigger: clipping_node,
-            start: 'top center',
+            start: 'top bottom-=20%',
             scrub: true,
-            end: 'bottom bottom',
-            // markers: true
+            end: 'bottom bottom-=20%',
+            //markers: true
         }
     });
     pros_timeline
         .from(document.querySelectorAll('.what-u-get-core__pros-container__single-layout__image-container'), {
             opacity: 0,
-            yPercent: -20,
+            yPercent: -130,
             duration: 2,
             stagger: 0.2
         })

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 start: 'top bottom-=30%',
                 scrub: true,
                 end: 'bottom bottom-=30%',
-                markers: true
+                //markers: true
             }
         });
         layout_timeline
