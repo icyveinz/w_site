@@ -12,6 +12,7 @@ const pic_animation_template = (index) => {
             opacity: 0,
             transform: 'scale(0), rotate(270deg)',
             xPercent: 10,
+            yPercent: 10,
             borderRadius: '150%'
         }
     }
@@ -20,6 +21,7 @@ const pic_animation_template = (index) => {
             opacity: 0,
             transform: 'scale(0), rotate(-270deg)',
             xPercent: -10,
+            yPercent: 10,
             borderRadius: '150%'
         }
     }
