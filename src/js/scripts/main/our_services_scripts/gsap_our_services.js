@@ -11,14 +11,16 @@ const pic_animation_template = (index) => {
         return {
             opacity: 0,
             transform: 'scale(0), rotate(270deg)',
-            xPercent: 10
+            xPercent: 10,
+            borderRadius: '150%'
         }
     }
     else {
         return {
             opacity: 0,
             transform: 'scale(0), rotate(-270deg)',
-            xPercent: -10
+            xPercent: -10,
+            borderRadius: '150%'
         }
     }
 }
