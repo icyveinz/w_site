@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     start: 'top-=20% bottom-=30%',
                     scrub: true,
                     end: 'bottom bottom-=30%',
-                    markers: true
+                    //markers: true
                 }
             });
             trigger_node
