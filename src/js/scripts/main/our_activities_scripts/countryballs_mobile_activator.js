@@ -1,3 +1,5 @@
+import {countryballs_image_template, countryballs_span_template} from "./countryballs_animation_template.js";
+
 function countryballs_mobile_activator() {
     const country_node = document.querySelectorAll('.our-activities-core__countries-layout-container__image-comment-container');
     country_node.forEach((element) => {
@@ -11,17 +13,8 @@ function countryballs_mobile_activator() {
             }
         });
         country_timeline
-            .from(element.querySelector('img'), {
-                opacity: 0,
-                yPercent: -10,
-                transform: 'scale(0)',
-                duration: 2
-            })
-            .from(element.querySelector('span'), {
-                opacity: 0,
-                transform: 'scale(0)',
-                duration: 1
-            })
+            .from(element.querySelector('img'), countryballs_image_template())
+            .from(element.querySelector('span'), countryballs_span_template())
     })
 }
 export default countryballs_mobile_activator;
