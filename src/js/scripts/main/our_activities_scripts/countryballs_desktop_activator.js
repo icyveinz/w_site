@@ -1,3 +1,5 @@
+import {countryballs_image_template, countryballs_span_template} from "./countryballs_animation_template.js";
+
 function countryballs_desktop_activator() {
     const country_node = document.querySelector('.our-activities-core__restricted-width');
     const desktop_timeline = gsap.timeline({
@@ -10,16 +12,7 @@ function countryballs_desktop_activator() {
         }
     });
     desktop_timeline
-        .from(country_node.querySelectorAll('img'), {
-            opacity: 0,
-            yPercent: -10,
-            transform: 'scale(0)',
-            duration: 2
-        })
-        .from(country_node.querySelectorAll('span'), {
-            opacity: 0,
-            transform: 'scale(0)',
-            duration: 1
-        })
+        .from(country_node.querySelectorAll('img'), countryballs_image_template())
+        .from(country_node.querySelectorAll('span'), countryballs_span_template())
 }
 export default countryballs_desktop_activator;
