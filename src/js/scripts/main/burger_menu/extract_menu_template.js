@@ -17,6 +17,11 @@ function extract_menu_template() {
                 </a>
             </div>
             <div class="burger-menu-core__unwrapped-and-centered-container__navigation-container animate__animated animate__slideInDown">
+                <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#products-section">
+                    Продукция
+                </a>
+            </div>
+            <div class="burger-menu-core__unwrapped-and-centered-container__navigation-container animate__animated animate__slideInDown">
                 <a class="burger-menu-core__unwrapped-and-centered-container__navigation-container__a-navigation" href="#contacts-mobile-anchor">
                     Контакты
                 </a>
