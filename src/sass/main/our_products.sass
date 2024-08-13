@@ -1,0 +1,16 @@
+@import "../assets/fonts"
+@import "../assets/colors"
+@import "../assets/mixins"
+
+.our-products-core
+  @include place-in-center-before-wrapping
+  &__max-width
+    @include restricted-2400-wrapper
+  &__restricted-width
+    @include restricted-1400-wrapper
+  &__container
+    @include title-and-description-centered-container
+    &__title
+      font-family: yanone-medium
+      font-size: 4vw
+      color: $main_blue
