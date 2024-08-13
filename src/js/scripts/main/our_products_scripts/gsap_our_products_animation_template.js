@@ -2,7 +2,7 @@ function standard_card_animation() {
     return {
         xPercent : -20,
         opacity : 0,
-        boxShadow: '-30px 0px 5px 10px #000000'
+        boxShadow: '-50px 0px 5px 10px #000000'
     }
 }
 
