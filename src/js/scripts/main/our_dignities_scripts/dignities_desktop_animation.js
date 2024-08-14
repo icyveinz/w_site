@@ -1,7 +1,7 @@
 import {falling_from_the_top, move_from_the_left_side, move_from_the_right_side} from "./dignities_animation_template.js";
 
 function dignities_desktop_animation() {
-    const trigger_node = document.querySelector('.our-dignities-core__restricted-width');
+    const trigger_node = document.querySelector('.our-dignities-core__grid-holder');
     const timeline_moderated = gsap.timeline({
         scrollTrigger: {
             trigger: trigger_node,
@@ -12,7 +12,6 @@ function dignities_desktop_animation() {
         }
     });
     trigger_node
-        .querySelector('.our-dignities-core__grid-holder')
         .querySelectorAll('section')
         .forEach((layout, index) => {
             if (index === 0) {
