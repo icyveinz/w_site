@@ -3,7 +3,7 @@ import {standard_card_animation, rotate_3d_object_animation} from "./gsap_our_pr
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
-    const cards_trigger_node = document.querySelector('.our-products-core__restricted-width');
+    const cards_trigger_node = document.querySelector('.our-products-core__products-presentation-container');
     const cards_body_node = document.querySelectorAll('.our-products-core__products-presentation-container__single-container');
     const products_timeline = gsap.timeline({
         scrollTrigger: {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             start: 'top bottom-=25%',
             scrub: true,
             end: 'bottom bottom-=25%',
-            // markers: true
+            markers: true
         }
     });
     cards_body_node.forEach((object, index) => {
