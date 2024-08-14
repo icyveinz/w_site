@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             start: 'top bottom-=25%',
             scrub: true,
             end: 'bottom bottom-=25%',
-            markers: true
+            // markers: true
         }
     });
     cards_body_node.forEach((object, index) => {
