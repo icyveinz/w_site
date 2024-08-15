@@ -1,4 +1,4 @@
-import animateValue from "./animateValue.js";
+import animateValue from "./animateValue-min.js";
 
 // Launch the animations for counters.
 function initAnimations() {

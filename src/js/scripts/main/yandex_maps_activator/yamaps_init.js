@@ -1,4 +1,4 @@
-import maps_interface_builder from "./maps_interface_builder.js";
+import maps_interface_builder from "./maps_interface_builder-min.js";
 
 ymaps.ready(init);
 

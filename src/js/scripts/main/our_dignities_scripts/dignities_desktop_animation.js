@@ -1,4 +1,4 @@
-import {falling_from_the_top, move_from_the_left_side, move_from_the_right_side} from "./dignities_animation_template.js";
+import {falling_from_the_top, move_from_the_left_side, move_from_the_right_side} from "./dignities_animation_template-min.js";
 
 function dignities_desktop_animation() {
     const trigger_node = document.querySelector('.our-dignities-core__grid-holder');

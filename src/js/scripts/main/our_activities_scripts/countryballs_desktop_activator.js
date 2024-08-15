@@ -1,4 +1,4 @@
-import {countryballs_image_template, countryballs_span_template} from "./countryballs_animation_template.js";
+import {countryballs_image_template, countryballs_span_template} from "./countryballs_animation_template-min.js";
 
 function countryballs_desktop_activator() {
     const country_node = document.querySelector('.our-activities-core__restricted-width');

@@ -1,4 +1,4 @@
-import {standard_card_animation, rotate_3d_object_animation} from "./gsap_our_products_animation_template.js";
+import {standard_card_animation, rotate_3d_object_animation} from "./gsap_our_products_animation_template-min.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
