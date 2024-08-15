@@ -10,14 +10,7 @@ working_directories.forEach((directory) => {
             process.exit(1);
         }
         files.forEach((value) => {
-            if (value.includes('-min')) {
-                fs.rename(value, value.replace("-min", ""), (err) => {
-                    if (err) {
-                        console.log(err);
-                    }
-                })
-            }
-            else {
+            if (!value.includes('-min')) {
                 fs.unlinkSync(value);
             }
         })
