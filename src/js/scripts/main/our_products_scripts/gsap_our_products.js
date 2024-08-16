@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const products_timeline = gsap.timeline({
         scrollTrigger: {
             trigger: cards_trigger_node,
-            start: 'top bottom-=25%',
+            start: 'top-=55% bottom-=25%',
             scrub: true,
-            end: 'bottom bottom-=25%',
-            // markers: true
+            end: 'bottom+=25% bottom-=25%',
+            //markers: true
         }
     });
     cards_body_node.forEach((object, index) => {

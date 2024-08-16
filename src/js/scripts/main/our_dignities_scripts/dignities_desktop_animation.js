@@ -8,7 +8,7 @@ function dignities_desktop_animation() {
             start: 'top-=40% bottom-=30%',
             scrub: true,
             end: 'bottom bottom-=30%',
-            markers: true
+            //markers: true
         }
     });
     trigger_node
