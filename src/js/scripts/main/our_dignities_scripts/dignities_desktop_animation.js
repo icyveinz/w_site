@@ -5,10 +5,10 @@ function dignities_desktop_animation() {
     const timeline_moderated = gsap.timeline({
         scrollTrigger: {
             trigger: trigger_node,
-            start: 'top-=20% bottom-=30%',
+            start: 'top-=40% bottom-=30%',
             scrub: true,
             end: 'bottom bottom-=30%',
-            //markers: true
+            markers: true
         }
     });
     trigger_node
