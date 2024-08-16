@@ -5,9 +5,9 @@ function dignities_mobile_animation() {
     const timeline_moderated = gsap.timeline({
         scrollTrigger: {
             trigger: trigger_node,
-            start: 'top bottom-=30%',
+            start: 'top center-=5%',
             scrub: true,
-            end: 'bottom bottom-=30%'
+            end: 'bottom center-=5%'
             //markers: true
         }
     });
