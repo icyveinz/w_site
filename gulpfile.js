@@ -5,6 +5,7 @@ const cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
 const minify = require('gulp-minify');
 const imagemin = require('gulp-imagemin');
+const concat = require('gulp-concat'); // For compressing all js/sass files into one
 
 gulp.task('serve', function() {
     browserSync.init({
@@ -19,6 +20,7 @@ gulp.task('styles', function() {
         .src('src/sass/**/*.+(sass|scss|css)') // From where we import sass to compile to css.
         .pipe(sass({outputStyle : 'compressed'}).on('error', sass.logError)) // compressed output style of css + log error if it happens.
         .pipe(cleanCSS({compatibility : 'ie8'})) // compressor for CSS
+        .pipe(concat('all.css'))
         .pipe(gulp.dest('dist/css')) // A destination where compiled css file is placed.
         .pipe(browserSync.stream());
 });
