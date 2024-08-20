@@ -10,19 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: cards_trigger_node,
             start: 'top-=55% bottom-=25%',
             scrub: true,
-            end: 'bottom+=25% bottom-=25%',
+            end: 'bottom+=15% bottom-=25%',
             //markers: true
         }
     });
-    cards_body_node.forEach((object, index) => {
-        index === 0
-            ?
-                products_timeline
-                    .from(object, standard_card_animation())
-                    .from(object.querySelector('img'), rotate_3d_object_animation())
-            :
-                products_timeline
-                    .from(object, standard_card_animation())
-                    .from(object.querySelector('p'), rotate_3d_object_animation())
+    cards_body_node.forEach((object) => {
+        products_timeline
+            .from(object, standard_card_animation())
+            .from(object.querySelector('img'), rotate_3d_object_animation())
     })
 });
