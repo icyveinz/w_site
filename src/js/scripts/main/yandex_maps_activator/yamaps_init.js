@@ -1,9 +1,11 @@
 import maps_interface_builder from "./maps_interface_builder-min.js";
 
-ymaps.ready(init);
+function maps_lazy_load() {
+    ymaps.ready(init);
+}
 
 function init() {
-    var myMap = new ymaps.Map("yandex-maps", {
+    var myMap = new ymaps.Map(document.getElementById('yandex-maps'), {
             center: [55.676160, 37.470385],
             zoom: 15
         }, {
@@ -34,3 +36,5 @@ function init() {
     myMap.geoObjects
         .add(myGeoObject);
 }
+
+export {maps_lazy_load};
