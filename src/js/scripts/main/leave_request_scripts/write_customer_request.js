@@ -1,6 +1,6 @@
-import format_the_object from "./format_the_object-min.js";
-import display_and_hide_notification from "./display_and_hide_notification-min.js";
-import route from "../url_routes-min.js";
+import format_the_object from "./format_the_object.js";
+import display_and_hide_notification from "./display_and_hide_notification.js";
+import route from "../url_routes.js";
 
 function write_customer_request(name, phone, comment) {
 

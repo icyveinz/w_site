@@ -1,8 +1,8 @@
-import verify_fields from "./verify_fields-min.js";
-import format_the_object from "./format_the_object-min.js";
-import display_and_hide_notification from "./display_and_hide_notification-min.js";
-import write_customer_request from "./write_customer_request-min.js";
-import check_activity_before_appending from "./check_activity_before_appending-min.js";
+import verify_fields from "./verify_fields.js";
+import format_the_object from "./format_the_object.js";
+import display_and_hide_notification from "./display_and_hide_notification.js";
+import write_customer_request from "./write_customer_request.js";
+import check_activity_before_appending from "./check_activity_before_appending.js";
 
 $(function () {
     const button = $(".leave-request-div__request-frame-div__button");

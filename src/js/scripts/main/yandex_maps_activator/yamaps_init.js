@@ -1,4 +1,4 @@
-import maps_interface_builder from "./maps_interface_builder-min.js";
+import maps_interface_builder from "./maps_interface_builder.js";
 
 function maps_lazy_load() {
     ymaps.ready(init);

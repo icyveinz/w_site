@@ -1,6 +1,6 @@
-import extract_menu_template from "./extract_menu_template-min.js";
-import extract_root_container from "./extract_root_container-min.js";
-import fold_menu_function from "./fold_menu_function-min.js";
+import extract_menu_template from "./extract_menu_template.js";
+import extract_root_container from "./extract_root_container.js";
+import fold_menu_function from "./fold_menu_function.js";
 
 $(function() {
     let condition = false;
