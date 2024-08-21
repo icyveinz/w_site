@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
             start: 'top-=55% bottom-=25%',
             scrub: true,
             end: 'bottom+=15% bottom-=25%',
+            onEnter: maps_lazy_load
             //markers: true
         }
     });
-    maps_lazy_load(); // Start uploading yandex-maps preview before the start of animation
     cards_body_node.forEach((object) => {
         products_timeline
             .from(object, standard_card_animation())

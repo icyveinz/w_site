@@ -21,15 +21,15 @@ module.exports = {
     }
 };
 
-module.exports = {
-    entry: [
-        "./src/js/scripts/main/preloader/preloader.js",
-        "./src/js/scripts/legal/gsap_legal_animation.js"
-    ],
-    output: {
-        filename: 'bundled_legal.js',
-        path: path.resolve(__dirname, 'dist/js/scripts/legal'),
-    }
-};
+// module.exports = {
+//     entry: [
+//         "./src/js/scripts/main/preloader/preloader.js",
+//         "./src/js/scripts/legal/gsap_legal_animation.js"
+//     ],
+//     output: {
+//         filename: 'bundled_legal.js',
+//         path: path.resolve(__dirname, 'dist/js/scripts/legal'),
+//     }
+// };
 
 // npx webpack to run
