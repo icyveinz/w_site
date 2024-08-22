@@ -1,7 +1,7 @@
 var glob = require('glob');
 var fs = require('fs')
 
-const working_directories = ['dist/js/scripts/main', 'dist/js/scripts/legal']
+const working_directories = ['dist/js/scripts']
 
 working_directories.forEach((directory) => {
     console.log(directory)
