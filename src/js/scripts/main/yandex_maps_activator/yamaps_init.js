@@ -1,8 +1,6 @@
 import maps_interface_builder from "./maps_interface_builder.js";
 
 function maps_lazy_load() {
-    const script = document.createElement('script');
-    script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=57dffcef-37e9-4061-a8d3-8219e6b04fe4";
     ymaps.ready(init);
 }
 
