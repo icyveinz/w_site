@@ -5,9 +5,9 @@ import write_customer_request from "./write_customer_request.js";
 import check_activity_before_appending from "./check_activity_before_appending.js";
 
 $(function () {
-    const button = $(".leave-request-div__request-frame-div__button");
+    const desktop_button = $("#desktop");
 
-    button.on({
+    desktop_button.on({
         mouseenter: function () {
             $(this).css({
                 'background-color': "rgb(174, 209, 84)",
@@ -23,7 +23,7 @@ $(function () {
     });
 
     // Fetch the name & surname of customer and then make a request to the API.
-    button.on('click', function() {
+    desktop_button.on('click', function() {
         const name = document.getElementById("customer_name").value;
         const phone_num = document.getElementById("customer_phone").value;
         const comment = document.getElementById("customer_comment").value;

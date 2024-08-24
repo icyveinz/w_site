@@ -17,15 +17,9 @@
     display: flex
     flex-direction: column
   &__h1-title-styler
-    font-family: yanone-medium
-    font-size: 5vw
-    color: $main_blue
+    @include h1-title-styler
   &__p-title-styler
-    font-family : yanone-light
-    font-weight: normal
-    font-size: 2.5vw
-    color: black
-    margin-top: 2%
+    @include p-title-styler
   &__request-call-column-align
     display: flex
     flex-direction: column
@@ -94,9 +88,15 @@
       font-size: 50px
 
 @media (max-width: 750px)
+  .leave-request-centered
+    display: none
   .leave-request-div__request-frame-div__input
     border-bottom: 1px solid $main_green
   .leave-request-div__request-frame-div__header
     font-size: 2vw
   .leave-request-div__request-frame-div__button
     font-size: 2vw
+    padding: 5% 14%
+  .leave-request-div__request-frame-div
+    width: 100%
+    margin-top: 5%

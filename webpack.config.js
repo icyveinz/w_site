@@ -9,6 +9,7 @@ module.exports = {
             "./src/js/scripts/main/burger_menu/burger_menu.js",
             "./src/js/scripts/main/burger_menu/hover_animation_burger_menu.js",
             "./src/js/scripts/main/leave_request_scripts/leave_request_scripts.js",
+            "./src/js/scripts/main/leave_request_mobile_scripts/leave_request_mobile_scripts.js",
             "./src/js/scripts/main/leave_request_scripts/gsap_leave_request.js",
             "./src/js/scripts/main/gsap_media/gsap_media_container.js",
             "./src/js/scripts/main/our_services_scripts/gsap_our_services.js",
