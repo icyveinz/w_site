@@ -63,7 +63,6 @@
     <script defer src="js/libraries/gsap.min.js"></script>
     <script defer src="js/libraries/ScrollTrigger.min.js"></script>
 
-    <script async src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=57dffcef-37e9-4061-a8d3-8219e6b04fe4" type="text/javascript"></script>
     <script defer src="js/scripts/bundled_main.js"></script>
 </head>
 <body>
@@ -518,7 +517,9 @@
     <div class="our-information-core">
         <div id="our-information-section" class="our-information-core__max-width">
             <div class="our-information-core__container">
-                <div id="yandex-maps" class="our-information-core__container__maps-layout"></div>
+                <div id="yandex-maps" class="our-information-core__container__maps-layout">
+                    <iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aafebaf547f272e83c1f2bd0f8471509c1b41f70bc498246595c708aac70c805e&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
                 <div class="our-information-core__container__about-us-layout" id="contacts-mobile-anchor">
                     <section class="our-information-core__container__about-us-layout__container">
                         <h4 class="our-information-core__container__about-us-layout__container__big-title">

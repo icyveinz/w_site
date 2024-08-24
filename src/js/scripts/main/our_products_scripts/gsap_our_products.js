@@ -1,5 +1,5 @@
 import {standard_card_animation, rotate_3d_object_animation} from "./gsap_our_products_animation_template.js";
-import {maps_lazy_load} from "../yandex_maps_activator/yamaps_init.js"
+// import {maps_lazy_load} from "../yandex_maps_activator/yamaps_init.js"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             start: 'top-=55% bottom-=25%',
             scrub: true,
             end: 'bottom+=15% bottom-=25%',
-            onEnter: maps_lazy_load
+            //onEnter: maps_lazy_load
             //markers: true
         }
     });
