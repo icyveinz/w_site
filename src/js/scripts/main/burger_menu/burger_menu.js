@@ -1,6 +1,7 @@
 import extract_menu_template from "./extract_menu_template.js";
 import extract_root_container from "./extract_root_container.js";
 import fold_menu_function from "./fold_menu_function.js";
+import run_append_animation from "./gsap_mobile_menu_animation";
 
 $(function() {
     let condition = false;
@@ -9,6 +10,7 @@ $(function() {
         if (!condition) {
             $('.burger-menu-core').append(extract_root_container());
             $('.burger-menu-core__unwrapped-and-centered-container').append(extract_menu_template());
+            run_append_animation();
             // setTimeout(() => {
             //     $('.burger-menu-core__unwrapped-and-centered-container').append(extract_menu_template());
             // }, 900);

@@ -1,6 +1,19 @@
 const path = require("path");
+const TerserPlugin = require('terser-webpack-plugin'); // For minifying and removing comments
 
 module.exports = {
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    format: {
+                        comments: false
+                    }
+                }
+            })
+        ]
+    },
     entry: {
         main: [
             "./src/js/scripts/main/preloader/preloader.js",
