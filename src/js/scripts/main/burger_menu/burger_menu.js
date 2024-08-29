@@ -1,7 +1,6 @@
 import extract_menu_template from "./extract_menu_template.js";
 import extract_root_container from "./extract_root_container.js";
-import fold_menu_function from "./fold_menu_function.js";
-import run_append_animation from "./gsap_mobile_menu_animation";
+import {run_append_animation,fold_menu_function} from "./gsap_mobile_menu_animation";
 
 $(function() {
     let condition = false;
