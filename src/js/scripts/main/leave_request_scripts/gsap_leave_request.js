@@ -15,5 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 0,
             duration: 1,
             transform: 'scale(0)'
-        });
+        })
+        .from('.leave-request-div__request-frame-div', {
+            opacity: 0,
+            xPercent: -20,
+            stagger: 0.5
+        })
 });
