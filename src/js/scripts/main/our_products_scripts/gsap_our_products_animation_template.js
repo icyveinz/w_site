@@ -1,9 +1,8 @@
 function standard_card_animation() {
     return {
-        xPercent : -20,
+        yPercent : -20,
         opacity : 0,
-        borderRadius: '0px',
-        boxShadow: '-50px 0px 5px 10px #000000'
+        borderRadius: '0px'
     }
 }
 

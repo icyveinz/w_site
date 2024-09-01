@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .from('.leave-request-div__p-title-styler', {
             opacity: 0,
             xPercent: -10,
-            duration: 2
+            duration: 1.5
         })
         .from('.leave-request-div__request-call-column-align', {
             opacity: 0,
