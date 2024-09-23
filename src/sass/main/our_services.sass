@@ -99,9 +99,29 @@
       font-size: 5vw
     &__comments
       font-size: 3vw
+  .our-services-core__grid-container
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-columns: none !important
+    column-gap: 0
+    &__image-placeholder
+      @include image-in-grid-formatter
+      grid-row: 1 / 2
+      grid-column: none !important
+    &__inv-image-placeholder
+      @include image-in-grid-formatter
+      grid-row: 1 / 2
+      grid-column: none !important
+    &__text-placeholder
+      grid-row: 2 / 3
+      grid-column: none !important
+      @include title-comment-layout-inside-grid
+    &__inv-text-placeholder
+      grid-row: 2 / 3
+      grid-column: none !important
+      @include title-comment-layout-inside-grid
   .our-services-core__grid-container__grid-text__title
-    font-size: 3vw
+    font-size: 5vw
   .our-services-core__grid-container__grid-text__comment
-    font-size: 1.8vw
+    font-size: 3vw
   .our-services-core__grid-container__grid-text__comment__text-mark-green
-    font-size: 2vw
+    font-size: 3vw
