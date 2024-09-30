@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             start: 'top+=10% bottom',
             scrub: true,
             end: 'bottom-=10% bottom',
-            markers: true
+            // markers: true
         }
     });
     pros_timeline
