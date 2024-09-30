@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const pros_timeline = gsap.timeline({
         scrollTrigger: {
             trigger: clipping_node,
-            start: 'top bottom',
+            start: 'top+=10% bottom',
             scrub: true,
-            end: 'bottom bottom',
-            // markers: true
+            end: 'bottom-=10% bottom',
+            markers: true
         }
     });
     pros_timeline
