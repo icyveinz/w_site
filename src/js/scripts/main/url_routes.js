@@ -1,5 +1,5 @@
 const route = {
-    api_url : "https://new-api.space"
+    api_url : "https://trustedapi.space"
 };
 
 export default route;
