@@ -89,6 +89,12 @@ gulp.task('favicon-mover', function() {
         .pipe(gulp.dest("dist"))
 });
 
+gulp.task('robots-mover', function () {
+    return gulp
+        .src('src/robots.txt')
+        .pipe(gulp.dest('dist'))
+})
+
 gulp.task("default", gulp.parallel(
     'serve',
     'styles',
@@ -102,5 +108,6 @@ gulp.task("default", gulp.parallel(
     'images-mover',
     'fonts-mover',
     "pdf-mover",
-    "favicon-mover"
+    "favicon-mover",
+    "robots-mover"
 ));
