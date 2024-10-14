@@ -3,7 +3,6 @@ const browserSync = require('browser-sync');
 const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
-const minify = require('gulp-minify');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat'); // For compressing all js/sass files into one
 
@@ -45,23 +44,11 @@ gulp.task('html-minimizer-additional', function() {
 
 gulp.task('plugins-mover', function() { // Move all CSS plugins to the dist.
     return gulp.src("src/css/*.css").pipe(gulp.dest('dist/css'))
-})
-
-gulp.task('scripts-mover', function() { // move js files.
-    return gulp.src('src/js/scripts/*.js') // get the js files from src
-        .pipe(gulp.dest('dist/js/scripts'))
 });
 
 gulp.task('js-library-mover', function() { // move library js files.
     return gulp.src('src/js/libraries/*.js') // get the js files from src
         .pipe(gulp.dest('dist/js/libraries'))
-});
-
-gulp.task('js-compressor', function() {
-    return gulp
-        .src('src/js/scripts/**/*.js')
-        .pipe(minify())
-        .pipe(gulp.dest('dist/js/scripts'))
 });
 
 gulp.task('images-mover', function() {
@@ -102,9 +89,7 @@ gulp.task("default", gulp.parallel(
     'html-minimizer',
     'html-minimizer-additional',
     'plugins-mover',
-    'scripts-mover',
     'js-library-mover',
-    'js-compressor',
     'images-mover',
     'fonts-mover',
     "pdf-mover",
