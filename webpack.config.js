@@ -2,6 +2,7 @@ const path = require("path");
 const TerserPlugin = require('terser-webpack-plugin'); // For minifying and removing comments
 
 module.exports = {
+    mode: "production",
     optimization: {
         minimize: true,
         minimizer: [
@@ -29,7 +30,8 @@ module.exports = {
             "./src/js/scripts/main/what_u_get_scripts/gsap_what_u_get.js",
             "./src/js/scripts/main/our_products_scripts/gsap_our_products.js",
             "./src/js/scripts/main/our_products_scripts/our_products_hover_redirect.js",
-            "./src/js/scripts/main/our_reliability_scripts/our_reliability_scripts.js"
+            "./src/js/scripts/main/our_reliability_scripts/our_reliability_scripts.js",
+            "./src/js/scripts/main/fab_call_scripts/gsap_fab_call.js"
         ],
         legal: [
             "./src/js/scripts/main/preloader/preloader.js",
