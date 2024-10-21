@@ -5,7 +5,6 @@ import {run_append_animation,fold_menu_function} from "./gsap_mobile_menu_animat
 $(function() {
     let condition = false;
     $('.burger').on('click', function() {
-        console.log('button is clicked');
         if (!condition) {
             $('.burger-menu-core').append(extract_root_container());
             $('.burger-menu-core__unwrapped-and-centered-container').append(extract_menu_template());

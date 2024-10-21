@@ -28,8 +28,6 @@ $(function() {
         const phone_num = document.getElementById("customer_phone_mobile").value;
         const comment = document.getElementById("customer_comment_mobile").value;
 
-        console.log('clicked');
-
         const result = verify_fields(name, phone_num, comment); //
 
         // check if alert window is already at the screen. If true - do not toggle notification.

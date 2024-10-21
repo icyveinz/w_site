@@ -27,9 +27,6 @@ $(function () {
         const name = document.getElementById("customer_name").value;
         const phone_num = document.getElementById("customer_phone").value;
         const comment = document.getElementById("customer_comment").value;
-
-        console.log('clicked');
-
         const result = verify_fields(name, phone_num, comment);
 
         // check if alert window is already at the screen. If true - do not toggle notification.
