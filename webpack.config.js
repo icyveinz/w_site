@@ -26,7 +26,6 @@ module.exports = {
             "./src/js/scripts/main/leave_request_mobile_scripts/leave_request_mobile_scripts.js",
             "./src/js/scripts/main/leave_request_scripts/gsap_leave_request.js",
             "./src/js/scripts/main/gsap_media/gsap_media_container.js",
-            "./src/js/scripts/main/our_services_scripts/gsap_our_services.js",
             "./src/js/scripts/main/what_u_get_scripts/gsap_what_u_get.js",
             "./src/js/scripts/main/our_products_scripts/gsap_our_products.js",
             "./src/js/scripts/main/our_products_scripts/our_products_hover_redirect.js",
