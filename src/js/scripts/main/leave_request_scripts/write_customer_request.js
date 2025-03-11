@@ -4,7 +4,7 @@ import route from "../url_routes.js";
 
 function write_customer_request(name, phone, comment) {
 
-    fetch(`${route.api_url}/api/walgreen/customer/write`, {
+    fetch(`${route.api_url}/orders_client/create/wgl/`, {
         method : "POST",
         body : JSON.stringify({
             email : `${phone}`,
